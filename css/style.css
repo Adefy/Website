@@ -1,0 +1,501 @@
+@import url(bootstrap.css);
+@import url(bootstrap-responsive.css);
+@import url(font-awesome/font-awesome.css);
+
+@font-face {
+  font-family: 'Oleo Script';
+  src: url('../font/Oleo_Script/oleoscript-regular-webfont.eot');
+  src: url('../font/Oleo_Script/oleoscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/Oleo_Script/oleoscript-regular-webfont.svg#oleo_scriptregular') format('svg'),
+       url('../font/Oleo_Script/oleoscript-regular-webfont.woff') format('woff'),
+       url('../font/Oleo_Script/oleoscript-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../font/Cabin/cabin-regular-webfont.eot');
+  src: url('../font/Cabin/cabin-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/Cabin/cabin-regular-webfont.svg#cabinregular') format('svg'),
+       url('../font/Cabin/cabin-regular-webfont.woff') format('woff'),
+       url('../font/Cabin/cabin-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.color-1 {
+  background: #33b5e5;
+  color: white;
+}
+
+.color-2 {
+  background: #0099cc;
+  color: white;
+}
+
+.color-3 {
+  background: #f6fcff;
+}
+
+.color-3 a {
+  color: #0099cc;
+}
+
+.color-4 {
+  background: white;
+  color: #333;
+}
+
+.color-4 a {
+  color: #3083a7;
+}
+
+.color-3 h1,.color-3 h2,.color-3 h3,.color-3 h4,.color-3 h5,.color-3 h6,.color-4 h1,.color-4 h2,.color-4 h3,.color-4 h4,.color-4 h5,.color-4 h6 {
+  color: #333;
+}
+
+.color-3 .btn,.color-4 .btn {
+  color: white;
+}
+
+.color-5 {
+  background: #010a0c;
+  color: white;
+}
+
+.page {
+  padding-top: 35px;
+}
+
+.row-fluid {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.inner-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+[class*="span"] {
+  padding: 0 30px;
+}
+
+.navbar {
+  color: #fff;
+  background: #333;
+  background: rgba(0,0,0,0.8);
+}
+
+.navbar .nav {
+  font-size: 15px;
+  float: right;
+  margin: 0;
+}
+
+.navbar .nav>li>a {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.nav a {
+  transition: color 0.4s ease-out, background 0.4s ease-in;
+}
+
+.active .brand-2,.brand-2:hover {
+  background-color: #0099cc !important;
+}
+
+.active .brand-3,.brand-3:hover {
+  background-color: #f6fcff !important;
+}
+
+.active .brand-4,.brand-4:hover {
+  background-color: white !important;
+}
+
+a {
+  transition: color 0.4s ease-out, background 0.7s ease-in;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+hr {
+  width: 50%;
+  margin: 30px auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.list-inline li {
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.features {
+  text-align: center;
+  display: inline-block;
+}
+
+.features h3 {
+  font-size: 28px;
+}
+
+.features li {
+  max-width: 310px;
+  float: right;
+  margin: 0 10px;
+}
+
+.features li i {
+  color: #0099cc;
+  font-size: 32px;
+  padding-top: 30px;
+}
+
+.big-list {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.big-list li {
+  line-height: 35px;
+  height: 50px;
+  margin: 10px;
+}
+
+.big-list i {
+  float: left;
+  width: 50px;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.list-wide li {
+  padding: 5px 0;
+}
+
+.btn-nav {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  display: none;
+  color: #333;
+  z-index: 99999;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+  line-height: 110%;
+  color: white;
+  padding: 0px 20px 0px 0;
+  margin: 30px 0;
+  font-family: "Oleo Script", serif;
+}
+
+.logo {
+  margin: 0;
+  padding: 6px;
+  font-size: 25px;
+  float: left;
+  letter-spacing: 1px;
+  font-family: "Oleo Script", serif;
+}
+
+.page-headline {
+  font-size: 42px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.large {
+  font-size: 52px;
+}
+
+.lead {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.big {
+  font-size: 25px;
+  line-height: 29px;
+  padding: 0;
+}
+
+strong {
+  font-weight: 400;
+}
+
+@media (max-width: 979px) {
+  body {
+    padding: 0;
+  }
+
+  .page {
+    padding-top: 20px;
+  }
+
+  [class*="span"] {
+    padding: 0 60px;
+  }
+
+  hr {
+    margin: 10px auto;
+  }
+
+  h1 {
+    float: left;
+    text-align: center;
+  }
+
+  p {
+    margin: 10px auto;
+    padding: 0;
+  }
+
+  .big-list li {
+    height: auto;
+    line-height: 30px;
+  };
+}
+
+@media (max-width: 600px) { iframe { width: 100%; }}
+
+@media (max-width: 768px) {
+
+  .features li { float: none; }
+
+  .row-fluid ul li { padding-left: 0; }
+
+  h1 {
+    line-height: 32px;
+    padding: 4px 0;
+    width: 100%;
+    text-align: center;
+    float: left;
+  }
+
+  .lead {
+    font-size: 22px;
+  }
+
+  .page-headline {
+    font-size: 42px;
+  }
+
+  .navbar-fixed-top {
+    position: fixed;
+    margin: 0;
+  }
+
+  .nav-collapse,.nav-collapse.collapse {
+    background: rgba(0,0,0,0.8);
+    height: 0;
+    overflow: hidden;
+  }
+
+  .navbar .nav li a {
+    padding: 6px 30px;
+  }
+
+  .navbar .nav {
+    float: none;
+  }
+
+  .btn-nav {
+    display: block;
+  }
+
+  .nav-collapse .nav>li>a {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    font-weight: 400;
+  }
+
+  .page {
+    padding-top: 30px;
+  }
+
+  .big-list {
+    font-size: 28px;
+    margin: 30px auto !important;
+    padding: 0;
+  }
+
+  .big-list li {
+    line-height: 24px;
+    text-align: center;
+    width: 49%;
+    display: inline-block;
+    margin: 10px 0;
+    height: auto;
+  }
+
+  .big-list i {
+    font-size: 64px;
+    width: 100%;
+    margin-bottom: 5px;
+  };
+}
+
+@media (max-width: 480px) {
+  [class*="span"] {
+    padding: 0 10px;
+  }
+
+  .page-headline {
+    font-size: 28px;
+  }
+
+  .btn {
+    line-height: auto;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .pull-left {
+    float: none;
+  }
+
+  .row-fluid {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .nav-tabs>li {
+    float: none;
+  }
+
+  .big-list {
+    margin: 20px auto !important;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .big-list i {
+    font-size: 32px;
+  };
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+body,textarea:focus,input:focus {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #333;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #333;
+  color: #ffffff;
+}
+
+.centered {
+  margin: 0 auto;
+  display: block;
+}
+
+.border {
+  border: 1px solid #0099cc;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+#adefy-synopsis .teaser {
+  line-height: 1.6;
+  margin-top: -0.5em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+hr {
+  margin: 24px auto;
+  border: 0;
+  border-top: 1px solid #b8dbeb;
+  border-bottom: 1px solid #ffffff;
+  width: 80%;
+}
+
+#metrics h3 {
+  margin-top: 0;
+}
+
+#metric-teaser h2,#metric-teaser h3 {
+  color: white;
+}
+
+#metric-teaser h3 {
+  margin: 0;
+  font-family: "Cabin";
+}
+
+#delivery h3,footer h3 {
+  margin-top: 0;
+}
+
+.input-append input {
+  margin-left: 16px;
+  padding: 0 0 0 8px;
+  border: none;
+  height: 32px;
+}
+
+.input-append button {
+  height: 32px;
+  border: none;
+}
+
+#adefy-info {
+  width: 150px;
+  padding: 8px 8px 12px 8px;
+  color: #f3f3f3;
+  font-size: 14px;
+  background-color: #690;
+  border: 4px solid #9c0;
+  border-radius: 20px;
+}
+
+#adefy-info-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-family: "Oleo Script", serif;
+}
+
+#adefy-info-desc {
+  text-align: center;
+  display: block;
+}
+
+.hoverPointer:hover {
+  cursor: hand;
+  cursor: pointer;
+}
