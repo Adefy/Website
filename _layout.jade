@@ -1,0 +1,92 @@
+!!!
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+
+    title Adefy
+
+    meta(name="description", content="")
+    meta(name="author", content="Spectrum IT")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
+
+    link(rel="stylesheet", href='http://fonts.googleapis.com/css?family=Gudea:400,700,400italic|Oleo+Script')
+
+    link(rel="stylesheet", href="/css/reset.css")
+    link(rel="stylesheet", href="/css/styles.css")
+
+    | <!--[if lt IE 9]>
+    |   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    | <![endif]-->
+
+  body
+
+    header
+      .center
+        .menu
+          a(href="/technology") How we do native
+          a(href="/publishers") Publishers
+          a(href="/advertisers") Advertisers
+          a(href="/about") About
+          a(href="/contact") Contact us
+        .language
+          a(href="/help") Help
+          a(href="") Language
+      .center
+        .logo: a(href="/") Adefy
+        .search
+          input(type='text' placeholder='Search')
+    != yield
+    footer
+      .center
+        ul
+          li 
+            h6 Technology
+            a(href="") Creative Formats
+            a(href="") Native Rendering
+            a(href="") Box2D Integration
+            a(href="") Preloading
+          li
+            h6 Advertisers
+            a(href="") Authoring Tools
+            a(href="") Ad Translation
+            a(href="") Designer Resources
+            a(href="") Content Guidelines
+          li
+            h6 Publishers
+            a(href="") Integration
+            a(href="") Minimum Payout
+            a(href="") House Ads
+            a(href="") Developer Resources
+            a(href="") SDK Downloads
+          li
+            h6 Legal
+            a(href="") Privacy
+            a(href="") Terms &amp; Conditions
+          li
+            h6 Help center
+            a(href="/about") About
+            a(href="") Contact Us
+            a(href="") FAQ
+            a(href="") Documentation
+      hr
+      .center
+        .menu
+          a(href="/home") Home
+          a(href="") How we do native
+          a(href="/publishers") Publishers
+          a(href="/advertisers") Advertisers
+          a(href="/about") About
+          a(href="/contact") Contact us
+        .language
+          a(href="/help") Help
+          a(href="") Language
+      .center
+        p.copyright
+          | Adefyr and the Pentastar logo are registered trademarks of Group LLC.
+          br
+          | Adefy is a registered trademark of Group Marketing &amp; Corporate Communication S.p.A. used under license by Group LLC. *MSRP excludes destination, taxes, title and registration fees. Starting at price refers to the base model, optional equipment not included. A more expensive model may be shown. Pricing and offers may change
+
+    script(src="/js/retina-1.1.0.min.js")
