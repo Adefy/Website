@@ -551,6 +551,31 @@ $container_margin:  auto; // auto|px|%  //
     display: none;
   }
 
+  .map img {
+    max-width: 200%;
+    margin-left: -50%;
+  }
+
+  .location {
+    height: auto;
+
+    .center {
+      display: inline-block;
+      text-align: center;
+
+      .city h6 { margin-top: 18px; }
+      .city h2 { margin-bottom: 8px; }
+      .address { padding: 0; }
+      .mail { padding: 4px 0 16px 0; }
+
+      div {
+        @include column(2);
+      }
+
+      @include generate_grid_positions(div, 2);
+    }
+  }
+
   section {
     img { display: none; }
     padding: 32px 12px;

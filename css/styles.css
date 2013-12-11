@@ -595,6 +595,34 @@ nav {
   nav {
     display: none; }
 
+  .map img {
+    max-width: 200%;
+    margin-left: -50%; }
+
+  .location {
+    height: auto; }
+    .location .center {
+      display: inline-block;
+      text-align: center; }
+      .location .center .city h6 {
+        margin-top: 18px; }
+      .location .center .city h2 {
+        margin-bottom: 8px; }
+      .location .center .address {
+        padding: 0; }
+      .location .center .mail {
+        padding: 4px 0 16px 0; }
+      .location .center div {
+        float: left;
+        margin-right: -100%;
+        width: 100%; }
+      .location .center div:nth-child(1n+1) {
+        margin-left: 0%;
+        margin-bottom: 2.55%;
+        clear: both;
+        overflow: hidden;
+        *zoom: 1; }
+
   section {
     padding: 32px 12px;
     text-align: center; }
