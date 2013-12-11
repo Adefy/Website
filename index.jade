@@ -1,21 +1,23 @@
 .video
-  video(controls height="530" src="/video.mp4" poster="/transparent.png" onclick="this.play();") 
+  video(controls height="530" src="/video.mp4" poster="/transparent.png" onclick="this.play();")
+  img#video-placeholder(src="/mobile-poster.png")
+
 .actions: .center
   a(href="/advertisers").advertise
     h6 Advertise
-    h2 
+    h2
       | Deliver your
       br
       | product organically
   a(href="/newsletter").newsletter
     h6 Check our newsletter
-    h2 
-      | Newsletter
+    h2
+      | Subscribe
       br
-      | gain news!
+      | for news!
   a(href="/advertisers").monetize
     h6 Monetize
-    h2 
+    h2
       | Keep users
       br
       | engaged

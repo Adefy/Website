@@ -24,6 +24,10 @@ html(lang="en")
   body
 
     header
+      .center#header-mobile
+        .logo: a(href="/") Adefy
+        .search
+          input(type="text" placeholder="Search")
       .center
         .menu
           a(href="/technology") How we do native
@@ -34,10 +38,10 @@ html(lang="en")
         .language
           a(href="/help") Help
           a(href="") Language
-      .center
+      .center#header-desktop
         .logo: a(href="/") Adefy
         .search
-          input(type='text' placeholder='Search')
+          input(type="text" placeholder="Search")
     != yield
     footer
       .center
