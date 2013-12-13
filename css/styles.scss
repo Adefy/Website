@@ -487,31 +487,28 @@ $gutter_width: 0%;  // px|%     // px = fixed, % = fluid
     background: url('/img/MainOrganic.png') no-repeat;
     background-position: right;
 
-    @include image-2x('/img/2x/MainOrganic.png', 50%);
+    @include image-2x('/img/2x/MainOrganic.png', 33%);
   }
   .newsletter {
     background: url('/img/MainNewsletter.png') no-repeat;
     background-position: right bottom;
 
-    @include image-2x('/img/2x/MainNewsletter.png', 50%);
+    @include image-2x('/img/2x/MainNewsletter.png', 40%);
   }
   .monetize {
     h2, h6{ color: #fff !important;}
 
     background: #0b78c8; /* Old browsers */
-    background: url('/img/MainMonteize.png') no-repeat, -moz-linear-gradient(left, #0b78c8 0%, #70cbed 100%); /* FF3.6+ */
+    background: url('/img/MainMonetize.png') no-repeat, -moz-linear-gradient(left, #0b78c8 0%, #70cbed 100%); /* FF3.6+ */
 
-    background: url('/img/MainMonteize.png') no-repeat, -webkit-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* Chrome10+,Safari5.1+ */
-    background: url('/img/MainMonteize.png') no-repeat, -o-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* Opera 11.10+ */
-    background: url('/img/MainMonteize.png') no-repeat, -ms-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* IE10+ */
-    background: url('/img/MainMonteize.png') no-repeat, -linear-gradient(to right, #0b78c8 0%,#70cbed 100%); /* W3C */
+    background: url('/img/MainMonetize.png') no-repeat, -webkit-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* Chrome10+,Safari5.1+ */
+    background: url('/img/MainMonetize.png') no-repeat, -o-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* Opera 11.10+ */
+    background: url('/img/MainMonetize.png') no-repeat, -ms-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* IE10+ */
+    background: url('/img/MainMonetize.png') no-repeat, -linear-gradient(to right, #0b78c8 0%,#70cbed 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b78c8', endColorstr='#70cbed',GradientType=1 ); /* IE6-9 */
-
 
     background-image: url('/img/MainMonteize.png') no-repeat;
     background-position: right bottom;
-
-    @include image-2x('/img/2x/MainMonteize.png', 50%);
   }
 }
 
@@ -532,6 +529,12 @@ $container_margin:  auto; // auto|px|%  //
   padding-right: 0 !important;
   padding-left: 0 !important;
   width: 100%;
+}
+
+#signup input {
+  font-size: 24px;
+  padding: 4px 8px;
+  color: #0099cc;
 }
 
 @media screen and (max-width: 1182px) {

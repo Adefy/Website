@@ -1,0 +1,27 @@
+section.centered.no-bottom(style="padding: 60px 0;")#signup
+  h6 Sign Up
+  h1 Request an invite, and we'll email you when we launch :)
+  h3 Official launch early January 2014
+  input#email(placeholder="Email" type="email")
+  br
+  br
+  button(onclick="requestInvite()") Submit
+
+script.
+  window.requestInvite = function() {
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+      window.location.href = "/thanks";
+    }
+
+    var query = "https://app.adefy.com";
+    query += "/logic/invite/add?";
+    query += "key=WtwkqLBTIMwslKnc";
+    query += "&email=" + document.getElementById("email").value;
+
+    console.log(query);
+
+    xmlhttp.open("GET", query, true);
+    xmlhttp.send();
+  }

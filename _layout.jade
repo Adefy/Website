@@ -12,13 +12,13 @@ html(lang="en")
 
     link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
 
-    link(rel="stylesheet", href='http://fonts.googleapis.com/css?family=Gudea:400,700,400italic|Oleo+Script')
+    link(rel="stylesheet", href='//fonts.googleapis.com/css?family=Gudea:400,700,400italic|Oleo+Script')
 
     link(rel="stylesheet", href="/css/reset.css")
     link(rel="stylesheet", href="/css/styles.css")
 
     | <!--[if lt IE 9]>
-    |   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    |   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     | <![endif]-->
 
   body
@@ -34,7 +34,8 @@ html(lang="en")
           a(href="/about") About
           a(href="/contact") Contact us
         .language
-          a(href="http://docs.adefy.com" target="_blank") Help
+          //- a(href="http://developer.adefy.com" target="_blank") Help
+          a(href="/signup") Sign Up
         //-   a(href="") Language
       .center#header-desktop
         .logo: a(href="/") Adefy
@@ -57,16 +58,16 @@ html(lang="en")
             a(href="/advertisers#ad-generation") Realtime Ad Generation
             a(href="/advertisers#automatic-bidding") Automatic Bidding
             a(href="/advertisers#delivery") Intelligent Delivery
-            a(href="http://doc.adefy.com/design" target="_blank") Designer Resources
+            a(href="http://developer.adefy.com/design" target="_blank") Designer Resources
           li
             h6 Publishers
             a(href="/publishers#monetize") Monetize
             a(href="/publishers#inventory") Untapped Inventory
             a(href="/publishers#ads") Innovative Formats
             a(href="/publishers#floor-limits") Floor Limits
-            a(href="http://doc.adefy.com/develop/house" target="_blank") House Ads
-            a(href="http://doc.adefy.com/develop" target="_blank") Developer Resources
-            a(href="http://doc.adefy.com/develop/sdk" target="_blank") SDK Downloads
+            a(href="http://developer.adefy.com/develop/house" target="_blank") House Ads
+            a(href="http://developer.adefy.com/develop" target="_blank") Developer Resources
+            a(href="http://developer.adefy.com/develop/sdk" target="_blank") SDK Downloads
           li
             h6 Legal
             a(href="") Privacy
@@ -75,22 +76,23 @@ html(lang="en")
             h6 Help center
             a(href="/about") About
             a(href="/contact") Contact Us
-            a(href="http://doc.adefy.com/faq" target="_blank") FAQ
-            a(href="http://doc.adefy.com" target="_blank") Documentation
+            a(href="/imprint") Imprint
+            a(href="http://developer.adefy.com" target="_blank") Developer Center
       hr
       .center
         .menu
           a(href="/home") Home
-          a(href="") How we do native
+          a(href="/technology") How we do native
           a(href="/publishers") Publishers
           a(href="/advertisers") Advertisers
           a(href="/about") About
           a(href="/contact") Contact us
         .language
-          a(href="http://docs.adefy.com" target="_blank") Help
+          a(href="/signup") Sign Up
+          //- a(href="http://docs.adefy.com" target="_blank") Help
         //-   a(href="") Language
       .center
         p.copyright
-          | Adefy is a registered trademark of Spectrum IT Solutions GmbH
+          | Adefy TM by Spectrum IT Solutions GmbH 2013
 
     script(src="/js/retina-1.1.0.min.js")
