@@ -602,9 +602,10 @@ $container_margin:  auto; // auto|px|%  //
     height: auto;
     $total_columns: 1;
     $gutter_width: 2%;
-    $container_margin: 5%;
+    $container_margin: 0%;
     @include container();
     @include clearfix();
+    overflow: visible;
 
     .center {
       display: inline-block;
