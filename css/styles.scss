@@ -437,8 +437,6 @@ nav {
           text-align: center;
         }
       }
-
-
     }
   }
 }
@@ -548,6 +546,36 @@ $container_margin:  auto; // auto|px|%  //
   #header-mobile { display: inline-block }
   #header-desktop { display: none; }
 
+  .about {
+    .sidebar {
+      display: none;
+    }
+
+    .main {
+      @include push(0);
+      @include column(2);
+
+      .padding {
+        display: none;
+      }
+
+      .subgrid {
+        $total_columns: 3;
+        $gutter_width: 2%;
+        $container_margin: 5%;
+        @include container();
+        @include clearfix();
+
+        section.full {
+          @include column(3);
+
+          div { @include column(3); }
+          @include generate_grid_positions(div, 3);
+        }
+      }
+    }
+  }
+
   .video {
     min-height: 0;
 
@@ -567,36 +595,48 @@ $container_margin:  auto; // auto|px|%  //
   .map img {
     max-width: 200%;
     margin-left: -50%;
+    z-index: 100;
   }
 
   .location {
     height: auto;
+    $total_columns: 1;
+    $gutter_width: 2%;
+    $container_margin: 5%;
+    @include container();
+    @include clearfix();
 
     .center {
       display: inline-block;
       text-align: center;
 
+      .dot { z-index: 100000; }
       .city h6 { margin-top: 18px; }
       .city h2 { margin-bottom: 8px; }
       .address { padding: 0; }
       .mail { padding: 4px 0 16px 0; }
 
       div {
-        @include column(2);
+        @include column(1);
       }
 
-      @include generate_grid_positions(div, 2);
+      @include generate_grid_positions(div, 1);
     }
   }
 
   section {
+    $total_columns: 1;
+    $gutter_width: 2%;
+    $container_margin: 5%;
+    @include container();
+    @include clearfix();
+
     img { display: none; }
     padding: 32px 0;
-
     text-align: center;
 
     div {
-      @include column(2);
+      @include column(1);
     }
 
     button, a {
@@ -604,53 +644,62 @@ $container_margin:  auto; // auto|px|%  //
       display: block;
     }
 
-    @include generate_grid_positions(div, 2);
+    @include generate_grid_positions(div, 1);
   }
 
   header {
     .menu {
 
       margin: 8px 0;
-      @include column(2);
+      width: 100%;
 
       a {
-        @include column(2);
-
+        width: 100%;
         margin-bottom: 2px !important;
         text-align: center;
         font-size: 20px;
       }
-
-      @include generate_grid_positions(a, 2);
     }
 
     .language { display: none; }
   }
 
   .gray {
+    $total_columns: 1;
+    $gutter_width: 2%;
+    @include clearfix();
+
     .features {
 
       li {
-        @include column(2);
+        @include column(1);
         padding: 0 20px;
        }
 
-      @include generate_grid_positions(li, 2);
+      @include generate_grid_positions(li, 1);
     }
   }
 
   .actions {
+    $total_columns: 1;
+    $gutter_width: 2%;
+    @include clearfix();
+
     .center {
       a {
-        @include column(2);
+        @include column(1);
         margin-bottom: 0 !important;
       }
 
-      @include generate_grid_positions(a, 2);
+      @include generate_grid_positions(a, 1);
     }
   }
 
   footer {
+    $total_columns: 2;
+    $gutter_width: 2%;
+    $container_margin: 5%;
+
     ul {
       @include clearfix();
       li { @include column(1); }
