@@ -12,7 +12,9 @@ script.
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
-      window.location.href = "/thanks";
+      if(xmlhttp.readyState == 4) {
+        window.location.href = "/thanks";
+      }
     }
 
     var query = "https://app.adefy.com";

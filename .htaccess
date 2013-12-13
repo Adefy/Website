@@ -1,7 +1,17 @@
 Options +FollowSymLinks
-ErrorDocument 404 http://www.adefy.com/404
+ErrorDocument 404 https://www.adefy.com/404
 
 RewriteEngine On
+
+# First rewrite any request to the wrong domain to use the correct one (here www.)
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Now, rewrite to HTTPS:
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Append .html
 RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{3,4}
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ $1.html
