@@ -41,6 +41,12 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.mejs-container {
+  margin: 0 auto; }
+
+.mejs-overlay-button {
+  display: none; }
+
 body {
   font-family: Gudea;
   color: #858585;
@@ -630,6 +636,9 @@ nav {
       display: block;
       width: 100%;
       max-width: 320px; }
+
+  #mep_0 {
+    display: none !important; }
 
   nav {
     display: none; }

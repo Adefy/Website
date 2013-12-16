@@ -1,5 +1,11 @@
 .video
-  video(controls height="530" src="/video.mp4" poster="/transparent.png" onclick="this.play();")
+  video(controls="controls" width="942" height="530" src="/video.mp4" poster="/transparent.png" onclick="this.play();")
+
+    object(width="942" height="530" type="application/x-shockwave-flash" data="mediaelement/flashmediaelement.swf")
+      param(name="movie" value="mediaelement/flashmediaelement.swf")
+      param(name="flashvars" value="controls=true&file=/video.mp4")
+      img(src="/transparent.png" height="530" title="No video playback capabilities")
+
   img#video-placeholder(src="/mobile-poster.png")
 
 .actions: .center.fullw

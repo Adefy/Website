@@ -35,6 +35,9 @@ $container_margin:  auto; // auto|px|%  //
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
+.mejs-container { margin: 0 auto; }
+.mejs-overlay-button { display: none; }
+
 body {
   font-family: Gudea;
   color: #858585;
@@ -590,6 +593,8 @@ $container_margin:  auto; // auto|px|%  //
       max-width: 320px;
     }
   }
+
+  #mep_0 { display: none !important; }
 
   nav {
     display: none;
