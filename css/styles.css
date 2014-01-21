@@ -93,6 +93,13 @@ h6 {
 .blue {
   color: #33b5e5; }
 
+.tos {
+  line-height: 1.5; }
+
+.tos p {
+  max-width: 75%;
+  display: block; }
+
 p {
   margin: 0 0 20px; }
 
@@ -219,7 +226,7 @@ header {
     clear: none; }
   .gray .features button {
     margin: 0 auto; }
-  .gray .features h3 {
+  .gray .features h3, .gray .features em {
     color: #414141; }
   .gray .features p {
     font-size: 18px; }
@@ -368,7 +375,7 @@ section {
     clear: none; }
   section div {
     margin-bottom: 0 !important; }
-  section h1, section h3 {
+  section h1, section h3, section em {
     color: #414141; }
   section h1, section h2, section h3, section h4, section h5 {
     margin-bottom: 30px; }
