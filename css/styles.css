@@ -104,7 +104,7 @@ p {
   margin: 0 0 20px; }
 
 button {
-  display: block;
+  display: inline-block;
   background-color: #33b5e5;
   font-size: .875em;
   color: #fff;
@@ -117,6 +117,10 @@ button {
   button.large {
     border-radius: 30px;
     font-size: 1.5rem;
+    padding: 10px 40px; }
+  button.xlarge {
+    border-radius: 40px;
+    font-size: 2rem;
     padding: 10px 40px; }
 
 .center {
@@ -146,6 +150,8 @@ button {
     .language a:last-of-type {
       padding-right: 0;
       border-right: none; }
+  .language .white {
+    color: white; }
 
 header {
   background-color: #0a242e;
@@ -500,83 +506,59 @@ nav {
           margin: 30px 0; }
 
 .actions {
-  background-image: url("/img/geometry.png"); }
+  padding: 1.5rem 0;
+  text-align: center;
+  background-image: url("/img/geometry.png");
+  /*.center {
+    @include generate_grid_positions(a, 1);
+    a {
+      display: block;
+      @include column(1);
+      padding: 25px 30px;
+      padding-right: 0;
+      position: relative;
+
+      h6 {margin-bottom: 10px;}
+      h2 {
+        color: #414141;
+        letter-spacing: -.1rem;
+        line-height: 1;
+      }
+
+      &::after {
+        content: ' ';
+        background-image: url('/img/cursor.png');
+        width: 21px;
+        height: 24px;
+
+        position:absolute;
+        left: 30px;
+        bottom: 15px;
+      }
+
+      &:hover { text-decoration: none }
+
+      &:hover::after {
+        background-position: 0 -24px;
+      }
+    }
+  }
+
+  .advertise {
+    background: url('/img/MainOrganic.png') no-repeat;
+    background-position: right;
+
+    @include image-2x('/img/2x/MainOrganic.png', 33%);
+  }
+  .newsletter {
+    background: url('/img/MainNewsletter.png') no-repeat;
+    background-position: right bottom;
+
+    @include image-2x('/img/2x/MainNewsletter.png', 40%);
+  }*/ }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
     .actions {
       background-image: url("/img/geometry@2x.png"); } }
-  .actions .center a:nth-child(3n+1) {
-    margin-left: 0%;
-    margin-bottom: 0%;
-    clear: both;
-    overflow: hidden;
-    *zoom: 1; }
-  .actions .center a:nth-child(3n+2) {
-    margin-left: 33.33%;
-    margin-bottom: 0%;
-    clear: none; }
-  .actions .center a:nth-child(3n+3) {
-    margin-left: 66.67%;
-    margin-bottom: 0%;
-    clear: none; }
-  .actions .center a {
-    display: block;
-    float: left;
-    margin-right: -100%;
-    width: 33.33%;
-    padding: 25px 30px;
-    padding-right: 0;
-    position: relative; }
-    .actions .center a h6 {
-      margin-bottom: 10px; }
-    .actions .center a h2 {
-      color: #414141;
-      letter-spacing: -.1rem;
-      line-height: 1; }
-    .actions .center a::after {
-      content: ' ';
-      background-image: url("/img/cursor.png");
-      width: 21px;
-      height: 24px;
-      position: absolute;
-      left: 30px;
-      bottom: 15px; }
-    .actions .center a:hover {
-      text-decoration: none; }
-    .actions .center a:hover::after {
-      background-position: 0 -24px; }
-  .actions .advertise {
-    background: url("/img/MainOrganic.png") no-repeat;
-    background-position: right; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
-      .actions .advertise {
-        background-image: url("/img/2x/MainOrganic.png");
-        background-size: 33%, 33%; } }
-  .actions .newsletter {
-    background: url("/img/MainNewsletter.png") no-repeat;
-    background-position: right bottom; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13 / 10), only screen and (min-resolution: 120dpi) {
-      .actions .newsletter {
-        background-image: url("/img/2x/MainNewsletter.png");
-        background-size: 40%, 40%; } }
-  .actions .monetize {
-    background: #0b78c8;
-    /* Old browsers */
-    background: url("/img/MainMonetize.png") no-repeat, -moz-linear-gradient(left, #0b78c8 0%, #70cbed 100%);
-    /* FF3.6+ */
-    background: url("/img/MainMonetize.png") no-repeat, -webkit-linear-gradient(left, #0b78c8 0%, #70cbed 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: url("/img/MainMonetize.png") no-repeat, -o-linear-gradient(left, #0b78c8 0%, #70cbed 100%);
-    /* Opera 11.10+ */
-    background: url("/img/MainMonetize.png") no-repeat, -ms-linear-gradient(left, #0b78c8 0%, #70cbed 100%);
-    /* IE10+ */
-    background: url("/img/MainMonetize.png") no-repeat, -linear-gradient(to right, #0b78c8 0%, #70cbed 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b78c8', endColorstr='#70cbed',GradientType=1 );
-    /* IE6-9 */
-    background-image: url("/img/MainMonteize.png") no-repeat;
-    background-position: right bottom; }
-    .actions .monetize h2, .actions .monetize h6 {
-      color: #fff !important; }
 
 /* media queries */
 #header-mobile {
