@@ -58,7 +58,8 @@ a:hover, button:hover {
 
 a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   a:hover {
     text-decoration: underline; }
   a.button:hover {
@@ -435,6 +436,36 @@ nav {
     nav a:hover, nav a.active {
       font-weight: 700;
       text-decoration: none; }
+
+.demos {
+  padding: 60px 0 40px; }
+  .demos div:nth-child(3n+1) {
+    margin-left: 0%;
+    margin-bottom: 0;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1; }
+  .demos div:nth-child(3n+2) {
+    margin-left: 33.33%;
+    margin-bottom: 0;
+    clear: none; }
+  .demos div:nth-child(3n+3) {
+    margin-left: 66.67%;
+    margin-bottom: 0;
+    clear: none; }
+  .demos div {
+    display: block;
+    float: left;
+    margin-right: -100%;
+    width: 33.33%;
+    padding-right: 0;
+    position: relative; }
+  .demos .thumbnails {
+    padding: 1rem 1.5rem;
+    margin-top: 3rem;
+    text-align: center; }
+    .demos .thumbnails h2 {
+      color: #414141; }
 
 .about .sidebar {
   float: left;
