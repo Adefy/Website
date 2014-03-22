@@ -1,30 +1,17 @@
-.video
-  video(controls="controls" width="942" height="530" src="/video.mp4" poster="/transparent.png" onclick="this.play();")
+.splash
+  .center
+    .text
+      h1 <strong>Native</strong> mobile advertising network.
+      h3 Send your data to any service with the flick of a switch.
+      .actions
+        a.button(href="https://app.adefy.com/signup") Learn more
+        a.button.swag(href="https://app.adefy.com/signup") Get started!
+    .preview
+      img(src="/img/nexus_large.png")
 
-    object(width="942" height="530" type="application/x-shockwave-flash" data="mediaelement/flashmediaelement.swf")
-      param(name="movie" value="mediaelement/flashmediaelement.swf")
-      param(name="flashvars" value="controls=true&file=/video.mp4")
-      img(src="/transparent.png" height="530" title="No video playback capabilities")
-
-  img#video-placeholder(src="/mobile-poster.png")
-
-.actions: .center.fullw
-  a.button(href="https://app.adefy.com/signup")
-    button.xlarge Sign up!
-
-.gray
+.columnar
   p We believe ads can be awesome
   h1 Re-defining mobile advertising
-
-  //- .demos.center
-    .preview
-      img(src="/img/nexus_large.png" width="400")
-    .thumbnails
-      h2 Demos
-      h4 A small preview of what our native ad engine can do.
-
-    .preview
-      img(src="/img/nexus_large.png" width="400")
 
   .center
     ul.features

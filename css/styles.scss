@@ -47,11 +47,6 @@ body {
   // margin: 0 auto;
 }
 
-a:hover, button:hover {
-  cursor: hand;
-  cursor: pointer;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -59,6 +54,10 @@ a {
 
   &:hover { text-decoration: underline }
   &.button:hover { text-decoration: none }
+}
+
+strong {
+  font-weight: 600;
 }
 
 h1,h2,h3,
@@ -193,9 +192,57 @@ header {
   }
 }
 
-.video {
+.splash {
   background-color: #33b5e5;
-  min-height: 530px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  &::after {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    box-shadow: inset 0 -0px 25px rgba(0,0,0, .1);
+
+    pointer-events: none; // warning, IE11+!!
+  }
+
+  .button, button {
+    display: inline-block;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    padding: .75rem 1rem;
+    border-radius: 5px;
+
+    &.swag {
+      background-color:white;
+      border-color: white;
+      color: #33b5e5;
+    }
+  }
+
+  .center {
+    .text {
+      @include column(7);
+      @include push(0);
+    }
+    .preview {
+      @include column(5);
+      @include push(7);
+
+      margin-bottom: -20%;
+    }
+    & > div { padding: 4.5rem 2rem 0; }
+    .text { padding-top: 5.5rem }
+    img { width: 100%; }
+
+    .actions {
+      margin: 3rem 0;
+      .button, button { margin-right: .75rem }
+    }
+  }
 
   video {
     display: block;
@@ -209,8 +256,7 @@ header {
   }
 }
 
-.gray {
-  background-color: #e8e8e8;
+.columnar {
   padding: 30px 0 60px;
   text-align: center;
 
@@ -385,27 +431,6 @@ nav {
   }
 }
 
-.demos {
-  padding: 60px 0 40px;
-  //.center {
-    @include generate_grid_positions(div, 4);
-    div {
-      display: block;
-      @include column(4);
-      padding-right: 0;
-      position: relative;
-    }
-
-    .thumbnails {
-      padding: 1rem 1.5rem;
-      margin-top: 3rem;
-      text-align: center;
-
-      h2 { color: #414141 }
-    }
-  //}
-}
-
 .about {
   .sidebar {
     @include column(3);
@@ -475,80 +500,6 @@ nav {
       }
     }
   }
-}
-
-$total_columns:   3;
-$gutter_width: 0%;  // px|%     // px = fixed, % = fluid
-
-.actions {
-  padding: 1.5rem 0;
-  text-align: center;
-
-  background-image: url('/img/geometry.png');
-  @include image-2x('/img/geometry@2x.png');
-
-  /*.center {
-    @include generate_grid_positions(a, 1);
-    a {
-      display: block;
-      @include column(1);
-      padding: 25px 30px;
-      padding-right: 0;
-      position: relative;
-
-      h6 {margin-bottom: 10px;}
-      h2 {
-        color: #414141;
-        letter-spacing: -.1rem;
-        line-height: 1;
-      }
-
-      &::after {
-        content: ' ';
-        background-image: url('/img/cursor.png');
-        width: 21px;
-        height: 24px;
-
-        position:absolute;
-        left: 30px;
-        bottom: 15px;
-      }
-
-      &:hover { text-decoration: none }
-
-      &:hover::after {
-        background-position: 0 -24px;
-      }
-    }
-  }
-
-  .advertise {
-    background: url('/img/MainOrganic.png') no-repeat;
-    background-position: right;
-
-    @include image-2x('/img/2x/MainOrganic.png', 33%);
-  }
-  .newsletter {
-    background: url('/img/MainNewsletter.png') no-repeat;
-    background-position: right bottom;
-
-    @include image-2x('/img/2x/MainNewsletter.png', 40%);
-  }*/
-  //.monetize {
-    // h2, h6{ color: #fff !important;}
-
-    // background: #0b78c8; /* Old browsers */
-    // background: url('/img/MainMonetize.png') no-repeat, -moz-linear-gradient(left, #0b78c8 0%, #70cbed 100%); /* FF3.6+ */
-
-    // background: url('/img/MainMonetize.png') no-repeat, -webkit-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* Chrome10+,Safari5.1+ */
-    // background: url('/img/MainMonetize.png') no-repeat, -o-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* Opera 11.10+ */
-    // background: url('/img/MainMonetize.png') no-repeat, -ms-linear-gradient(left, #0b78c8 0%,#70cbed 100%); /* IE10+ */
-    // background: url('/img/MainMonetize.png') no-repeat, -linear-gradient(to right, #0b78c8 0%,#70cbed 100%); /* W3C */
-    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b78c8', endColorstr='#70cbed',GradientType=1 ); /* IE6-9 */
-
-    // background-image: url('/img/MainMonteize.png') no-repeat;
-    // background-position: right bottom;
-  //}
 }
 
 /* media queries */
