@@ -141,14 +141,14 @@ button {
     }
 
     font-size: .750em;
-    color: #999;
+    color: #ccc;
   }
 
   .white { color: #fff }
 }
 
 header {
-  background-color: #0a242e;
+  background-color: #33b5e5;
   padding: 25px 0 10px;
   font-size: 14px;
 
@@ -197,7 +197,7 @@ header {
   color: #fff;
   overflow: hidden;
   position: relative;
-  &::after {
+  /*&::after {
     position:absolute;
     top: 0;
     left: 0;
@@ -207,7 +207,7 @@ header {
     box-shadow: inset 0 -0px 25px rgba(0,0,0, .1);
 
     pointer-events: none; // warning, IE11+!!
-  }
+  }*/
 
   .button, button {
     display: inline-block;
@@ -234,8 +234,8 @@ header {
 
       margin-bottom: -20%;
     }
-    & > div { padding: 4.5rem 2rem 0; }
-    .text { padding-top: 5.5rem }
+    & > div { padding: 1.5rem 2rem 0; }
+    .text { padding-top: 4.5rem }
     img { width: 100%; }
 
     .actions {
@@ -273,6 +273,27 @@ header {
     h3, em { color: #414141 }
     p { font-size: 18px }
     img { margin: 30px 0 50px }
+  }
+}
+
+.signup {
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  padding: 80px 0;
+  text-align: center;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #eee;
+  span {
+    color: #414141;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    vertical-align: middle;
+  }
+  button {
+    margin-left: 2.3rem;
+    vertical-align: middle;
   }
 }
 
@@ -412,17 +433,14 @@ nav {
 
   a { @include column(3); } 
   @include generate_grid_positions(a, 3);
-  background-color: #33b5e5;
+  border-bottom: 1px solid #eee;
 
   a {
     display: block;
     padding: 30px 0;
-    color: white;
+    // color: white;
     text-align: center;
     margin-bottom: 0 !important; // wtf grid, why you do this?
-
-    border-left: 1px solid rgba(255,255,255,.2);
-    &:last-of-type { border-right: 1px solid rgba(255,255,255,.2); }
 
     &:hover, &.active {
       font-weight: 700;
