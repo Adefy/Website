@@ -373,10 +373,17 @@ nav {
 }
 
 .demo {
-  padding-bottom: 0;
   position: relative;
+  padding: 80px 0 60px;
+  border-bottom: 1px solid #e8e8e8;
+  overflow: hidden;
 
-  max-height: 600px;
+  &.no-bottom {
+    padding-bottom: 0;
+    max-height: 600px;
+  }
+
+  img { max-width: 100% }
 
   .center {
     .text {
