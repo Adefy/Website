@@ -132,7 +132,9 @@ button {
 
 .menu a {
   display: inline-block;
+  vertical-align: middle;
   margin-right: 30px;
+  line-height: 1rem;
   padding-bottom: 1px;
   border-bottom: 1px solid transparent; }
   .menu a:hover {
@@ -143,61 +145,44 @@ button {
   text-align: right; }
   .language a {
     display: inline-block;
+    margin: 0 .2rem;
+    line-height: 1rem;
     padding: 0 8px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: .750em;
-    color: #ccc; }
+    font-size: .750em; }
+    .language a.button {
+      border: 1px solid white;
+      border-radius: 3px;
+      padding: .35rem 1rem; }
     .language a:last-of-type {
-      padding-right: 0;
-      border-right: none; }
-  .language .white {
-    color: white; }
+      margin-right: 0; }
 
 header {
   background-color: #33b5e5;
-  padding: 25px 0 10px;
+  padding: 15px 0;
+  line-height: 3rem;
   font-size: 14px;
   color: #fff; }
+  header .logo {
+    font: 300 2rem Oleo Script; }
+    header .logo:hover {
+      border-bottom-color: transparent; }
   header .menu {
     float: left;
     margin-right: -100%;
-    width: 82.91%;
+    width: 74.36%;
     margin-left: 0%; }
   header .language {
     float: left;
     margin-right: -100%;
-    width: 14.54%;
-    margin-left: 85.46%; }
-  header .logo {
-    float: left;
-    margin-right: -100%;
-    width: 14.54%;
-    margin-left: 0%;
-    margin-top: 10px;
-    font: 300 40px Oleo Script; }
-    header .logo a:hover {
-      text-decoration: none; }
-  header .search {
-    float: left;
-    margin-right: -100%;
-    width: 82.91%;
-    margin-left: 17.09%;
-    margin-top: 20px;
-    text-align: right; }
-    header .search input {
-      font-family: Gudea;
-      padding: 7px;
-      padding-right: 0;
-      color: #fff;
-      text-align: right;
-      background: none;
-      border: none; }
+    width: 23.09%;
+    margin-left: 76.91%; }
 
 .splash {
   background-color: #33b5e5;
   color: #fff;
   overflow: hidden;
   position: relative;
+  padding-top: 2.75rem;
   /*&::after {
     position:absolute;
     top: 0;
@@ -231,9 +216,9 @@ header {
     margin-left: 59.82%;
     margin-bottom: -20%; }
   .splash .center > div {
-    padding: 1.5rem 2rem 0; }
+    padding: 0 2rem; }
   .splash .center .text {
-    padding-top: 4.5rem; }
+    padding-top: 3rem; }
   .splash .center img {
     width: 100%; }
   .splash .center .actions {
@@ -248,6 +233,27 @@ header {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
+
+.demo {
+  padding: 60px 0; }
+  .demo h3 {
+    color: #414141; }
+  .demo .center .text {
+    float: left;
+    margin-right: -100%;
+    width: 57.27%;
+    margin-left: 42.73%; }
+  .demo .center .preview {
+    float: left;
+    margin-right: -100%;
+    width: 40.18%;
+    margin-left: 0%; }
+  .demo .center > div {
+    padding: 1.5rem 2rem 0; }
+  .demo .center .text {
+    padding-top: 4.5rem; }
+  .demo .center img {
+    width: 100%; }
 
 .columnar {
   padding: 30px 0 60px;

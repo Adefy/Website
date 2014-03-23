@@ -114,18 +114,20 @@ button {
 }
 
 .menu {
-    a {
-      display: inline-block;
-      margin-right: 30px;
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+    line-height: 1rem; // reset
 
-      padding-bottom: 1px;
-      border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
 
-      &:hover {
-        text-decoration: none;
-        border-bottom-color: rgba(255,255,255,.2)
-      }
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: rgba(255,255,255,.2)
     }
+  }
 }
 
 .language {
@@ -133,62 +135,50 @@ button {
 
   a {
     display: inline-block;
+    margin: 0 .2rem;
+    line-height: 1rem; // reset
     padding: 0 8px;
-    border-right: 1px solid rgba(255,255,255,.2);
-    &:last-of-type {
-      padding-right: 0;
-      border-right: none;
-    }
 
     font-size: .750em;
-    color: #ccc;
-  }
+    //color: #ccc;
 
-  .white { color: #fff }
+    &.button {
+      border: 1px solid white;
+      border-radius: 3px;
+
+      padding: .35rem 1rem;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+  }
 }
 
 header {
   background-color: #33b5e5;
-  padding: 25px 0 10px;
+  padding: 15px 0;
+  line-height: 3rem;
   font-size: 14px;
 
   color: #fff;
 
+  .logo {
+    //margin-top: 10px;
+    font: 300 2rem Oleo Script; // 40px
+    //font-family: Oleo Script;
+    &:hover {border-bottom-color: transparent}
+  }
+
   .menu {
-    @include column(10);
+    @include column(9);
     @include push(0);
   }
 
   .language {
-    @include column(2);
-    @include push(10);
-  }
-
-
-  .logo {
-    @include column(2);
-    @include push(0);
-    margin-top: 10px;
-    font: 300 40px Oleo Script;
-
-    a:hover {text-decoration: none}
-  }
-
-  .search {
-    @include column(10);
-    @include push(2);
-    margin-top: 20px;
-    text-align: right;
-
-    input {
-      font-family: Gudea;
-      padding: 7px;
-      padding-right: 0;
-      color: #fff;
-      text-align: right;
-      background: none;
-      border: none;
-    }
+    @include column(3);
+    @include push(9);
   }
 }
 
@@ -197,6 +187,7 @@ header {
   color: #fff;
   overflow: hidden;
   position: relative;
+  padding-top: 2.75rem;
   /*&::after {
     position:absolute;
     top: 0;
@@ -234,8 +225,8 @@ header {
 
       margin-bottom: -20%;
     }
-    & > div { padding: 1.5rem 2rem 0; }
-    .text { padding-top: 4.5rem }
+    & > div { padding: 0 2rem; }
+    .text { padding-top: 3rem }
     img { width: 100%; }
 
     .actions {
@@ -253,6 +244,24 @@ header {
     -moz-background-size:cover; 
     -o-background-size:cover; 
     background-size:cover; 
+  }
+}
+
+.demo {
+  padding: 60px 0;
+  h3 { color: #414141 }
+  .center {
+    .text {
+      @include column(7);
+      @include push(5);
+    }
+    .preview {
+      @include column(5);
+      @include push(0);
+    }
+    & > div { padding: 1.5rem 2rem 0; }
+    .text { padding-top: 4.5rem }
+    img { width: 100%; }
   }
 }
 
