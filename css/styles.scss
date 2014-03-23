@@ -38,11 +38,6 @@ $container_margin:  auto; // auto|px|%  //
 .mejs-container { margin: 0 auto; }
 .mejs-overlay-button { display: none; }
 
-a:hover, button:hover {
-  cursor: hand;
-  cursor: pointer;
-}
-
 body {
   font-family: Gudea;
   color: #858585;
@@ -431,6 +426,8 @@ nav {
   background: #111;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+
+  button.white:hover { color: #111 }
 
   span {
     color: #515151;
