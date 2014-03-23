@@ -368,6 +368,7 @@ nav {
 
 .demo {
   padding-bottom: 0;
+  position: relative;
 
   .center {
     .text {
@@ -378,10 +379,18 @@ nav {
       @include column(5);
       @include push(0);
 
-      height: 500px;
+      height: 600px;
     }
     & > div { padding: 1.5rem 2rem 0; }
     .text { padding-top: 4.5rem }
+  }
+
+  #json-preview {
+    position: absolute;
+    right: 64px;
+    bottom: -190px;
+
+    width: 50%;
   }
 }
 

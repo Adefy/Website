@@ -392,7 +392,8 @@ nav {
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); }
 
 .demo {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  position: relative; }
   .demo .center .text {
     float: left;
     margin-right: -100%;
@@ -403,11 +404,16 @@ nav {
     margin-right: -100%;
     width: 41.67%;
     margin-left: 0%;
-    height: 500px; }
+    height: 600px; }
   .demo .center > div {
     padding: 1.5rem 2rem 0; }
   .demo .center .text {
     padding-top: 4.5rem; }
+  .demo #json-preview {
+    position: absolute;
+    right: 64px;
+    bottom: -190px;
+    width: 50%; }
 
 .columnar {
   text-align: center; }
