@@ -516,6 +516,12 @@ nav {
     .about section div img {
       margin: 30px 0; }
 
+.location {
+  background-image: url("/img/DSC_0469_hipster.png");
+  background-position: top;
+  background-size: cover;
+  height: 450px; }
+
 /* media queries */
 #signup input {
   font-size: 24px;
