@@ -535,9 +535,24 @@ $container_margin:  auto; // auto|px|%  //
 }
 
 @media screen and (max-width: 1182px) {
-  #content section {
+  #content section, header, footer {
     padding-left: 12px;
     padding-right: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .glad-preview { display: none; }
+  .gl-text { width: 100% !important; }
+}
+
+@media screen and (max-width: 768px) {
+  .center {
+    .preview { display: none; }
+    .text {
+      width: 100% !important;
+      margin: 0 !important;
+    }
   }
 }
 
