@@ -377,20 +377,23 @@ nav {
     -o-background-size: cover;
     background-size: cover; }
 
-.browser .center {
-  padding: 60px 0;
-  border-bottom: 1px solid #e8e8e8; }
-  .browser .center .right, .browser .center .left {
-    width: 27.5%; }
-  .browser .center .central {
-    width: 45%; }
-  .browser .center div {
-    display: inline-block;
-    padding: 1rem;
-    vertical-align: bottom; }
-    .browser .center div img {
-      max-width: 100%;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); }
+.browser {
+  text-align: center; }
+  .browser .center {
+    padding: 60px 0;
+    border-bottom: 1px solid #e8e8e8; }
+    .browser .center .right, .browser .center .left {
+      width: 27.5%; }
+    .browser .center .central {
+      width: 45%; }
+    .browser .center div {
+      display: inline-block;
+      padding: 1rem;
+      vertical-align: bottom; }
+      .browser .center div img {
+        max-width: 100%;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 3px; }
 
 .demo {
   padding-bottom: 0;
