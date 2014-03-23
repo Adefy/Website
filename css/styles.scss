@@ -79,29 +79,37 @@ h6 { font-size: .875rem; }
 .tos p { max-width: 75%; display: block; }
 p { margin: 0 0 20px }
 
-button {
+button, .button {
   display: inline-block;
-  background-color: #33b5e5;
+  background-color: transparent;
+  color: #33b5e5;
   font-size: .875em;
-  color: #fff;
 
-  border: 2px solid #33b5e5;
+
+  border: 1px solid;
   padding: 5px 40px;
-  border-radius: 15px;
+  border-radius: 5px;
+
+  &.white {
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #33b5e5;
+    }
+  }
 
   &:hover {
-    background-color: transparent;
-    color: #33b5e5;
+    background-color: #33b5e5;
+    color: #fff;
   }
 
   &.large {
-    border-radius: 30px;
     font-size: 1.5rem;
     padding: 10px 40px;
   }
 
   &.xlarge {
-    border-radius: 40px;
     font-size: 2rem;
     padding: 10px 40px;
   }
@@ -114,18 +122,20 @@ button {
 }
 
 .menu {
-    a {
-      display: inline-block;
-      margin-right: 30px;
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+    line-height: 1rem; // reset
 
-      padding-bottom: 1px;
-      border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
 
-      &:hover {
-        text-decoration: none;
-        border-bottom-color: rgba(255,255,255,.2)
-      }
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: rgba(255,255,255,.2)
     }
+  }
 }
 
 .language {
@@ -133,62 +143,44 @@ button {
 
   a {
     display: inline-block;
+    margin: 0 .2rem;
+    line-height: 1rem; // reset
     padding: 0 8px;
-    border-right: 1px solid rgba(255,255,255,.2);
-    &:last-of-type {
-      padding-right: 0;
-      border-right: none;
-    }
 
     font-size: .750em;
-    color: #ccc;
-  }
 
-  .white { color: #fff }
+    &.button {
+      border-radius: 3px;
+      padding: .25rem .75rem;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
 header {
   background-color: #33b5e5;
-  padding: 25px 0 10px;
+  padding: 15px 0;
+  line-height: 3rem;
   font-size: 14px;
 
   color: #fff;
 
+  .logo {
+    font: 300 2rem Oleo Script; // 40px
+    &:hover {border-bottom-color: transparent}
+  }
+
   .menu {
-    @include column(10);
+    @include column(9);
     @include push(0);
   }
 
   .language {
-    @include column(2);
-    @include push(10);
-  }
-
-
-  .logo {
-    @include column(2);
-    @include push(0);
-    margin-top: 10px;
-    font: 300 40px Oleo Script;
-
-    a:hover {text-decoration: none}
-  }
-
-  .search {
-    @include column(10);
-    @include push(2);
-    margin-top: 20px;
-    text-align: right;
-
-    input {
-      font-family: Gudea;
-      padding: 7px;
-      padding-right: 0;
-      color: #fff;
-      text-align: right;
-      background: none;
-      border: none;
-    }
+    @include column(3);
+    @include push(9);
   }
 }
 
@@ -197,17 +189,7 @@ header {
   color: #fff;
   overflow: hidden;
   position: relative;
-  /*&::after {
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    box-shadow: inset 0 -0px 25px rgba(0,0,0, .1);
-
-    pointer-events: none; // warning, IE11+!!
-  }*/
+  padding-top: 2.75rem;
 
   .button, button {
     display: inline-block;
@@ -234,8 +216,8 @@ header {
 
       margin-bottom: -20%;
     }
-    & > div { padding: 1.5rem 2rem 0; }
-    .text { padding-top: 4.5rem }
+    & > div { padding: 0 2rem; }
+    .text { padding-top: 3rem }
     img { width: 100%; }
 
     .actions {
@@ -253,6 +235,24 @@ header {
     -moz-background-size:cover; 
     -o-background-size:cover; 
     background-size:cover; 
+  }
+}
+
+.demo {
+  padding: 60px 0;
+  h3 { color: #414141 }
+  .center {
+    .text {
+      @include column(7);
+      @include push(5);
+    }
+    .preview {
+      @include column(5);
+      @include push(0);
+    }
+    & > div { padding: 1.5rem 2rem 0; }
+    .text { padding-top: 4.5rem }
+    img { width: 100%; }
   }
 }
 
@@ -277,14 +277,14 @@ header {
 }
 
 .signup {
-  background: #f9f9f9;
-  border-top: 1px solid #eee;
   padding: 80px 0;
   text-align: center;
-  margin-bottom: 80px;
-  border-bottom: 1px solid #eee;
+  background: #111;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+
   span {
-    color: #414141;
+    color: #515151;
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: 100;
@@ -294,6 +294,7 @@ header {
   button {
     margin-left: 2.3rem;
     vertical-align: middle;
+    color: #fff;
   }
 }
 
@@ -350,54 +351,6 @@ footer {
   }
 }
 
-/* contacts page */
-.map {
-  background-color: #e8e8e8;
-  img {
-    margin: 0 auto;
-    display: block;
-  }
-}
-.location {
-  background-image: url('/img/geometry.png');
-  @include image-2x('/img/geometry@2x.png');
-
-  height: 160px; // temp
-
-  font-size: 18px;
-
-  .center { overflow: visible !important}
-  .dot {
-    @include column(2);
-    @include push(2);
-
-    position: relative;
-    z-index: 2;
-    margin-top: -85px;
-  }
-
-  .city {
-    @include column(2);
-    @include push(4);
-
-    h2 {letter-spacing: -.20rem;}
-    h6 {margin: 30px 0 10px}
-  }
-  .address {
-    @include column(3);
-    @include push(6);
-
-    padding: 60px 0;
-  }
-  .mail {
-    @include column(2);
-    @include push(8);
-
-    padding: 60px 0;
-  }
-}
-
-
 section {
   @include clearfix();
   @include container();
@@ -450,72 +403,15 @@ nav {
 }
 
 .about {
-  .sidebar {
-    @include column(3);
-    @include push(0);
+  section {
+    @include container();
+    padding-top: 30px;
 
-    padding: 45px 0;
-
-    a {
-      position: relative;
-      font-size: 18px;
-      display: block;
-      padding: 15px 25px;
-      border-bottom: 1px solid #e8e8e8;
-      color: #414141;
-
-      &:hover { 
-        color: #33b5e5;
-        text-decoration: none;
-      }
-
-      &::after {
-        content: ' ';
-        background: url('/img/cursor.png') no-repeat;
-        background-size: 100%;
-        width: 11px;
-        height: 12px;
-
-        position:absolute;
-        right: 30px;
-        top: 50%;
-        margin-top: -6px;
-      }
-
-      &:hover::after {
-        background-position: 0 -12px;
-      }
-    }
-  }
-
-  .main {
-    @include column(9);
-    @include push(3);
-
-    padding: 30px 0;
-
-    background-color: #fafafa;
-
-    .subgrid {
-      $total_columns:   9;
-      $gutter_width: 2%;
-      $container_margin: 5%;
-      @include container();
-      @include clearfix();
-
-      section.full {
-        @include column(9);
-        @include push(0);
-
-        padding-top: 30px;
-
-        div { @include column(3); }
-        @include generate_grid_positions(div, 3);
-        div {
-          img { margin: 30px 0 }
-          text-align: center;
-        }
-      }
+    div { @include column(4); }
+    @include generate_grid_positions(div, 4);
+    div {
+      img { margin: 30px 0 }
+      text-align: center;
     }
   }
 }
@@ -527,16 +423,6 @@ $total_columns:   2;     //        //
 $total_width:   100%;     // px|100%    // px = fixed, 100% = fluid
 $gutter_width:    2.55%;  // px|%     // px = fixed, % = fluid
 $container_margin:  auto; // auto|px|%  //
-
-#header-mobile { display: none }
-#header-desktop { display: block; }
-#video-placeholder { display: none; }
-
-.fullw {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-  width: 100%;
-}
 
 #signup input {
   font-size: 24px;
@@ -552,89 +438,8 @@ $container_margin:  auto; // auto|px|%  //
 }
 
 @media screen and (max-width: 400px) {
-
-  #header-mobile { display: inline-block }
-  #header-desktop { display: none; }
-
-  .about {
-    .sidebar {
-      display: none;
-    }
-
-    .main {
-      @include push(0);
-      @include column(2);
-
-      .padding {
-        display: none;
-      }
-
-      .subgrid {
-        $total_columns: 3;
-        $gutter_width: 2%;
-        $container_margin: 5%;
-        @include container();
-        @include clearfix();
-
-        section.full {
-          @include column(3);
-
-          div { @include column(3); }
-          @include generate_grid_positions(div, 3);
-        }
-      }
-    }
-  }
-
-  .video {
-    min-height: 0;
-
-    video { display: none !important; }
-
-    #video-placeholder {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-    }
-  }
-
-  #mep_0 { display: none !important; }
-
   nav {
     display: none;
-  }
-
-  .map img {
-    max-width: 200%;
-    margin-left: -50%;
-    z-index: 100;
-  }
-
-  .location {
-    height: auto;
-    $total_columns: 1;
-    $gutter_width: 2%;
-    $container_margin: 0%;
-    @include container();
-    @include clearfix();
-    overflow: visible;
-
-    .center {
-      display: inline-block;
-      text-align: center;
-
-      .dot { z-index: 100000; }
-      .city h6 { margin-top: 18px; }
-      .city h2 { margin-bottom: 8px; }
-      .address { padding: 0; }
-      .mail { padding: 4px 0 16px 0; }
-
-      div {
-        @include column(1);
-      }
-
-      @include generate_grid_positions(div, 1);
-    }
   }
 
   section {
@@ -662,7 +467,6 @@ $container_margin:  auto; // auto|px|%  //
 
   header {
     .menu {
-
       margin: 8px 0;
       width: 100%;
 
@@ -677,7 +481,7 @@ $container_margin:  auto; // auto|px|%  //
     .language { display: none; }
   }
 
-  .gray {
+  .columnar {
     $total_columns: 1;
     $gutter_width: 2%;
     @include clearfix();
@@ -690,21 +494,6 @@ $container_margin:  auto; // auto|px|%  //
        }
 
       @include generate_grid_positions(li, 1);
-    }
-  }
-
-  .actions {
-    $total_columns: 1;
-    $gutter_width: 2%;
-    @include clearfix();
-
-    .center {
-      a {
-        @include column(1);
-        margin-bottom: 0 !important;
-      }
-
-      @include generate_grid_positions(a, 1);
     }
   }
 
