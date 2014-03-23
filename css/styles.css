@@ -377,17 +377,18 @@ nav {
     -o-background-size: cover;
     background-size: cover; }
 
-.preview {
-  padding: 60px 0 30px; }
-  .preview .center .right, .preview .center .left {
+.browser .center {
+  padding: 60px 0;
+  border-bottom: 1px solid #e8e8e8; }
+  .browser .center .right, .browser .center .left {
     width: 27.5%; }
-  .preview .center .central {
+  .browser .center .central {
     width: 45%; }
-  .preview .center div {
+  .browser .center div {
     display: inline-block;
     padding: 1rem;
     vertical-align: bottom; }
-    .preview .center div img {
+    .browser .center div img {
       max-width: 100%;
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); }
 

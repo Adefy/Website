@@ -341,10 +341,12 @@ nav {
   }
 }
 
-.preview {
-  padding: 60px 0 30px;
+.browser {
 
   .center {
+    padding: 60px 0;
+    border-bottom: 1px solid #e8e8e8;
+
     .right, .left {
       width: 27.5%;
     }
