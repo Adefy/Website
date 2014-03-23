@@ -391,20 +391,23 @@ nav {
       max-width: 100%;
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); }
 
-.demo .center .text {
-  float: left;
-  margin-right: -100%;
-  width: 58.33%;
-  margin-left: 41.67%; }
-.demo .center .preview {
-  float: left;
-  margin-right: -100%;
-  width: 41.67%;
-  margin-left: 0%; }
-.demo .center > div {
-  padding: 1.5rem 2rem 0; }
-.demo .center .text {
-  padding-top: 4.5rem; }
+.demo {
+  padding-bottom: 0; }
+  .demo .center .text {
+    float: left;
+    margin-right: -100%;
+    width: 58.33%;
+    margin-left: 41.67%; }
+  .demo .center .preview {
+    float: left;
+    margin-right: -100%;
+    width: 41.67%;
+    margin-left: 0%;
+    height: 500px; }
+  .demo .center > div {
+    padding: 1.5rem 2rem 0; }
+  .demo .center .text {
+    padding-top: 4.5rem; }
 
 .columnar {
   text-align: center; }

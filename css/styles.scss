@@ -367,7 +367,8 @@ nav {
 }
 
 .demo {
-  //padding: 60px 0;
+  padding-bottom: 0;
+
   .center {
     .text {
       @include column(7);
@@ -376,6 +377,8 @@ nav {
     .preview {
       @include column(5);
       @include push(0);
+
+      height: 500px;
     }
     & > div { padding: 1.5rem 2rem 0; }
     .text { padding-top: 4.5rem }
