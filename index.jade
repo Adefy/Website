@@ -58,13 +58,14 @@ section.demo: .center
     img(src="/img/native-json.png" data-at2x="/img/2x/native-json.png")
 
 section.demo: .center
-  .preview
-    img(src="/img/native-iphone-shadow.png")
   .text
     h2 Adefy Native Ads
     h4 Content is king
     p Users use their devices to find and consume consume content, a behaviour which Adefy Native ads have been built to integrate with. Our native ads are simply ad meta data, which publishers can display however they wish, monetizing their applications without annoying banner ads.
-    img(src="/img/native-json.png" data-at2x="/img/2x/native-json.png")
+
+    #glad-editor.editor(style="height: 640px")
+
+  .preview#glad
 
 section.columnar: .center
   h6 Mission
@@ -100,3 +101,20 @@ section.columnar: .center
 .signup: .center
   span Lots of text to make you interested in us
   button.large Sign up!
+
+script.
+  $(document).ready(function() {
+    editor = ace.edit($("#glad-editor")[0]);
+    editor.setTheme("ace/theme/tomorrow");
+    editor.getSession().setMode("ace/mode/javascript");
+    editor.setReadOnly(true);
+
+    loadAd({
+      logic: "/js/watch_logic.js",
+      manifest: "/js/watch_manifest.js",
+      adEditor: "glad-editor",
+      parentDiv: "#glad",
+      width: 420,
+      height: 746
+    });
+  });
