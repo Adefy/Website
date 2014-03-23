@@ -38,6 +38,11 @@ $container_margin:  auto; // auto|px|%  //
 .mejs-container { margin: 0 auto; }
 .mejs-overlay-button { display: none; }
 
+a:hover, button:hover {
+  cursor: hand;
+  cursor: pointer;
+}
+
 body {
   font-family: Gudea;
   color: #858585;
@@ -268,8 +273,8 @@ section {
 nav {
   $gutter_width: 0;
 
-  a { @include column(3); } 
-  @include generate_grid_positions(a, 3);
+  a { @include column(4); } 
+  @include generate_grid_positions(a, 4);
   border-bottom: 1px solid #eee;
 
   a {
