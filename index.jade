@@ -100,7 +100,8 @@ section.columnar: .center
 
 .signup: .center
   span Drop the banners. Go native now!
-  button.white.large Sign up!
+  a(href="https://app.adefy.com/signup")
+    button.white.large Sign up!
 
 script.
   $(document).ready(function() {
@@ -115,6 +116,7 @@ script.
       adEditor: "glad-editor",
       parentDiv: "#glad",
       width: 720,
-      height: 1280
+      height: 1280,
+      scrollOffset: 1800
     });
   });

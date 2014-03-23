@@ -13,20 +13,25 @@ loadAd = (options) ->
 
         canvasDiv = options.parentDiv.split("#").join ""
 
-        (->
-          eval """
-            var width = #{options.width};
-            var height = #{options.height};
+        hasTriggered = false
+        window.onscroll = ->
+          if window.pageYOffset > options.scrollOffset and not hasTriggered
+            hasTriggered = true
 
-            #{adManifest}
+            (->
+              eval """
+                var width = #{options.width};
+                var height = #{options.height};
 
-            AJS.init(function() {
-              AJS.loadManifest(textures, function() {
-                #{adLogic}
-              });
-            }, #{options.width}, #{options.height}, "#{canvasDiv}");
-          """
-        )()
+                #{adManifest}
+
+                AJS.init(function() {
+                  AJS.loadManifest(textures, function() {
+                    #{adLogic}
+                  });
+                }, #{options.width}, #{options.height}, "#{canvasDiv}");
+              """
+            )()
 
 loadSource = (path, cb) ->
   return cb() if path == undefined or path == null
