@@ -362,7 +362,7 @@ nav {
     div {
       display: inline-block;
       padding: 1rem;
-      vertical-align: bottom;
+      vertical-align: middle;
       img {
         max-width: 100%;
         box-shadow: 0 2px 15px rgba(0,0,0,.25);
@@ -376,6 +376,8 @@ nav {
   padding-bottom: 0;
   position: relative;
 
+  max-height: 600px;
+
   .center {
     .text {
       @include column(7);
@@ -384,19 +386,20 @@ nav {
     .preview {
       @include column(5);
       @include push(0);
-
-      height: 600px;
     }
     & > div { padding: 1.5rem 2rem 0; }
     .text { padding-top: 4.5rem }
   }
 
-  #json-preview {
-    position: absolute;
-    right: 64px;
-    bottom: -190px;
-
-    width: 50%;
+  &.demo:nth-child(odd) {
+    .text {
+      @include column(7);
+      @include push(0);
+    }
+    .preview {
+      @include column(5);
+      @include push(7);
+    }
   }
 }
 

@@ -388,7 +388,7 @@ nav {
     .browser .center div {
       display: inline-block;
       padding: 1rem;
-      vertical-align: bottom; }
+      vertical-align: middle; }
       .browser .center div img {
         max-width: 100%;
         box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
@@ -396,7 +396,8 @@ nav {
 
 .demo {
   padding-bottom: 0;
-  position: relative; }
+  position: relative;
+  max-height: 600px; }
   .demo .center .text {
     float: left;
     margin-right: -100%;
@@ -406,17 +407,21 @@ nav {
     float: left;
     margin-right: -100%;
     width: 41.67%;
-    margin-left: 0%;
-    height: 600px; }
+    margin-left: 0%; }
   .demo .center > div {
     padding: 1.5rem 2rem 0; }
   .demo .center .text {
     padding-top: 4.5rem; }
-  .demo #json-preview {
-    position: absolute;
-    right: 64px;
-    bottom: -190px;
-    width: 50%; }
+  .demo.demo:nth-child(odd) .text {
+    float: left;
+    margin-right: -100%;
+    width: 58.33%;
+    margin-left: 0%; }
+  .demo.demo:nth-child(odd) .preview {
+    float: left;
+    margin-right: -100%;
+    width: 41.67%;
+    margin-left: 58.33%; }
 
 .columnar {
   text-align: center; }
