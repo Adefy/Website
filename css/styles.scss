@@ -285,8 +285,7 @@ nav {
     margin-bottom: 0 !important; // wtf grid, why you do this?
 
     &:hover, &.active {
-      font-weight: 700;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }
