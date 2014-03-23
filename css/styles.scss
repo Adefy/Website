@@ -107,6 +107,7 @@ p { margin: 0 0 20px }
 button, .button {
   display: inline-block;
   background-color: transparent;
+  cursor: pointer;
   color: #33b5e5;
   font-size: .875em;
   border: 1px solid;
@@ -383,6 +384,7 @@ nav {
       img {
         max-width: 100%;
         box-shadow: 0 2px 15px rgba(0,0,0,.25);
+        border: 1px solid #ccc;
         border-radius: 3px;
       }
     }
@@ -469,6 +471,7 @@ nav {
 }
 
 .about {
+  text-align: center;
   section {
     @include container();
     padding-top: 30px;
@@ -476,7 +479,10 @@ nav {
     div { @include column(4); }
     @include generate_grid_positions(div, 4);
     div {
-      img { margin: 30px 0 }
+      .mail {
+        font-size: 3rem;
+        margin-bottom: 30px;
+      }
       text-align: center;
     }
   }
@@ -484,15 +490,27 @@ nav {
   section.team {
     .images {
       @include container();
-      div { @include column(2); }
-      @include generate_grid_positions(div, 2);
+      div { @include column(3); }
+      @include generate_grid_positions(div, 3);
       div {
-        padding: 1rem .5rem;
-        h1,h2,h3,h4 { margin-bottom: .3rem }
-        img { max-width: 100%; margin: 0 0 1rem }
+        padding: 1rem 4.5rem;
+        h1,h2,h3,h4,h5,h6{ margin-bottom: .3rem }
+        img {
+          max-width: 100%;
+          margin: 0 0 1rem;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .links {
+      a {
+        display: inline-block;
+        margin: 0 4px;
       }
     }
   }
+
 }
 
 .location {
