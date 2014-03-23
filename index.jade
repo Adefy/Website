@@ -9,7 +9,15 @@
     .preview
       img(src="/img/native-iphone.png")
 
-.demo: .center
+.preview: .center
+  div.left
+    img(src="/img/preview_left.png")
+  div.central
+    img(src="/img/preview_center.png")
+  div.right
+    img(src="/img/preview_right.png")
+
+section.demo: .center
   .preview
     img(src="/img/nexus_large.png")
   .text
@@ -17,7 +25,7 @@
     h4 Subline nao nao nao!
     p This is a completely random paragraph I typed out all by myself. How do I feel? I feel... I feel... proud of myself. Quoting the kid that learned how to ride a bike, I keep typing until I have enough to get back to work. There's still more though, so I start figuring out how to pull a _why on you all. GONE.
 
-.columnar
+section.columnar
   p We believe ads can be awesome
   h1 Re-defining mobile advertising
 
@@ -45,7 +53,7 @@
         a(href="/technology#ad-formats")
           button Show me more
 
-.columnar: .center
+section.columnar: .center
   h6 Mission
   h1 Redefining mobile ads
   h3
@@ -54,27 +62,27 @@
     | patterns. The web has and is evolving dramatically, and content
     | delivery needs to reflect this.
 
-    ul.features
-      li
-        img(src="/img/icons/link.png" data-at2x="/img/icons/link@2x.png")
-        h3 Organic
-        h4
-         | Advertisments appear in chains of interaction on mobiles, and we
-         | believe they shoud fit in seamlessly.
+  ul.features
+    li
+      img(src="/img/icons/link.png" data-at2x="/img/icons/link@2x.png")
+      h3 Organic
+      h4
+       | Advertisments appear in chains of interaction on mobiles, and we
+       | believe they shoud fit in seamlessly.
 
-      li
-        img(src="/img/icons/diamond.png" data-at2x="/img/icons/diamond@2x.png")
-        h3 Quality
-        h4
-         | Mobile advertising, as it exists today, values raw volume. We believe
-         | the quality of individual impressions vital to successful advertising.
+    li
+      img(src="/img/icons/diamond.png" data-at2x="/img/icons/diamond@2x.png")
+      h3 Quality
+      h4
+       | Mobile advertising, as it exists today, values raw volume. We believe
+       | the quality of individual impressions vital to successful advertising.
 
-      li
-        img(src="/img/icons/people.png" data-at2x="/img/icons/people@2x.png")
-        h3 User Experience
-        h4
-         | Flow is precious, as is screen space. Quality of user experience
-         | comes before all else in our approach to creative delivery.
+    li
+      img(src="/img/icons/people.png" data-at2x="/img/icons/people@2x.png")
+      h3 User Experience
+      h4
+       | Flow is precious, as is screen space. Quality of user experience
+       | comes before all else in our approach to creative delivery.
 
 .signup: .center
   span Lots of text to make you interested in us

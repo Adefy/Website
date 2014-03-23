@@ -69,6 +69,9 @@ h4, h5, h6 {
   text-rendering: optimizeLegibility;
   margin-bottom: 1.875rem; }
 
+h1, h2, h3, em {
+  color: #414141; }
+
 h1 {
   font-size: 2.625rem; }
 
@@ -180,124 +183,6 @@ header {
     width: 23.09%;
     margin-left: 76.91%; }
 
-.splash {
-  background-color: #33b5e5;
-  color: #fff;
-  overflow: hidden;
-  position: relative;
-  padding-top: 2.75rem; }
-  .splash .button, .splash button {
-    display: inline-block;
-    border: 1px solid white;
-    font-size: 1.5rem;
-    padding: .75rem 1rem;
-    border-radius: 5px; }
-    .splash .button.swag, .splash button.swag {
-      background-color: white;
-      border-color: white;
-      color: #33b5e5; }
-  .splash .center .text {
-    float: left;
-    margin-right: -100%;
-    width: 57.27%;
-    margin-left: 0%; }
-  .splash .center .preview {
-    float: left;
-    margin-right: -100%;
-    width: 40.18%;
-    margin-left: 59.82%;
-    margin-bottom: -20%; }
-  .splash .center > div {
-    padding: 0 2rem; }
-  .splash .center .text {
-    padding-top: 3rem; }
-  .splash .center img {
-    width: 100%; }
-  .splash .center .actions {
-    margin: 3rem 0; }
-    .splash .center .actions .button, .splash .center .actions button {
-      margin-right: 0.75rem; }
-  .splash video {
-    display: block;
-    margin: 0 auto;
-    background: transparent url("/poster.png") no-repeat 0 0;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-.demo {
-  padding: 60px 0; }
-  .demo h3 {
-    color: #414141; }
-  .demo .center .text {
-    float: left;
-    margin-right: -100%;
-    width: 57.27%;
-    margin-left: 42.73%; }
-  .demo .center .preview {
-    float: left;
-    margin-right: -100%;
-    width: 40.18%;
-    margin-left: 0%; }
-  .demo .center > div {
-    padding: 1.5rem 2rem 0; }
-  .demo .center .text {
-    padding-top: 4.5rem; }
-  .demo .center img {
-    width: 100%; }
-
-.columnar {
-  padding: 30px 0 60px;
-  text-align: center; }
-  .columnar h1 {
-    color: #414141; }
-  .columnar .features li {
-    float: left;
-    margin-right: -100%;
-    width: 31.63%;
-    padding: 0 20px; }
-  .columnar .features li:nth-child(3n+1) {
-    margin-left: 0%;
-    margin-bottom: 2.55%;
-    clear: both;
-    overflow: hidden;
-    *zoom: 1; }
-  .columnar .features li:nth-child(3n+2) {
-    margin-left: 34.18%;
-    margin-bottom: 2.55%;
-    clear: none; }
-  .columnar .features li:nth-child(3n+3) {
-    margin-left: 68.37%;
-    margin-bottom: 2.55%;
-    clear: none; }
-  .columnar .features button {
-    margin: 0 auto; }
-  .columnar .features h3, .columnar .features em {
-    color: #414141; }
-  .columnar .features p {
-    font-size: 18px; }
-  .columnar .features img {
-    margin: 30px 0 50px; }
-
-.signup {
-  padding: 80px 0;
-  text-align: center;
-  background: #111;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000; }
-  .signup span {
-    color: #515151;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-weight: 100;
-    letter-spacing: 3px;
-    vertical-align: middle; }
-  .signup button {
-    margin-left: 2.3rem;
-    vertical-align: middle;
-    color: #fff; }
-
 footer {
   background-color: #1d1d1d;
   padding: 60px 0 30px;
@@ -376,7 +261,7 @@ section {
   width: 100%;
   margin: 0 auto;
   max-width: 1170px;
-  padding: 80px 0 30px;
+  padding: 80px 0 60px;
   border-bottom: 1px solid #e8e8e8; }
   section div {
     float: left;
@@ -394,14 +279,13 @@ section {
     clear: none; }
   section div {
     margin-bottom: 0 !important; }
-  section h1, section h3, section em {
-    color: #414141; }
   section h1, section h2, section h3, section h4, section h5 {
     margin-bottom: 30px; }
   section h6 {
     margin-bottom: 20px; }
   section img {
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    max-width: 100%; }
   section .middle {
     display: block;
     margin: 0 auto 20px; }
@@ -445,6 +329,129 @@ nav {
       font-weight: 700;
       text-decoration: none; }
 
+.splash {
+  background-color: #33b5e5;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  padding-top: 2.75rem; }
+  .splash h1, .splash h2, .splash h3 {
+    color: white; }
+  .splash .button, .splash button {
+    display: inline-block;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    padding: .75rem 1rem;
+    border-radius: 5px; }
+    .splash .button.swag, .splash button.swag {
+      background-color: white;
+      border-color: white;
+      color: #33b5e5; }
+  .splash .center .text {
+    float: left;
+    margin-right: -100%;
+    width: 58.33%;
+    margin-left: 0%; }
+  .splash .center .preview {
+    float: left;
+    margin-right: -100%;
+    width: 41.67%;
+    margin-left: 58.33%;
+    margin-bottom: -20%; }
+  .splash .center > div {
+    padding: 0 2rem; }
+  .splash .center .text {
+    padding-top: 3rem; }
+  .splash .center img {
+    width: 100%; }
+  .splash .center .actions {
+    margin: 3rem 0; }
+    .splash .center .actions .button, .splash .center .actions button {
+      margin-right: 0.75rem; }
+  .splash video {
+    display: block;
+    margin: 0 auto;
+    background: transparent url("/poster.png") no-repeat 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+.preview {
+  padding: 60px 0 30px; }
+  .preview .center .right, .preview .center .left {
+    width: 27.5%; }
+  .preview .center .central {
+    width: 45%; }
+  .preview .center div {
+    display: inline-block;
+    padding: 1rem;
+    vertical-align: bottom; }
+    .preview .center div img {
+      max-width: 100%;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); }
+
+.demo .center .text {
+  float: left;
+  margin-right: -100%;
+  width: 58.33%;
+  margin-left: 41.67%; }
+.demo .center .preview {
+  float: left;
+  margin-right: -100%;
+  width: 41.67%;
+  margin-left: 0%; }
+.demo .center > div {
+  padding: 1.5rem 2rem 0; }
+.demo .center .text {
+  padding-top: 4.5rem; }
+
+.columnar {
+  text-align: center; }
+  .columnar .features li {
+    float: left;
+    margin-right: -100%;
+    width: 33.33%;
+    padding: 0 20px; }
+  .columnar .features li:nth-child(3n+1) {
+    margin-left: 0%;
+    margin-bottom: 0;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1; }
+  .columnar .features li:nth-child(3n+2) {
+    margin-left: 33.33%;
+    margin-bottom: 0;
+    clear: none; }
+  .columnar .features li:nth-child(3n+3) {
+    margin-left: 66.67%;
+    margin-bottom: 0;
+    clear: none; }
+  .columnar .features button {
+    margin: 0 auto; }
+  .columnar .features p {
+    font-size: 18px; }
+  .columnar .features img {
+    margin: 30px 0 50px; }
+
+.signup {
+  padding: 80px 0;
+  text-align: center;
+  background: #111;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; }
+  .signup span {
+    color: #515151;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    vertical-align: middle; }
+  .signup button {
+    margin-left: 2.3rem;
+    vertical-align: middle;
+    color: #fff; }
+
 .about section {
   width: 100%;
   margin: 0 auto;
@@ -479,7 +486,7 @@ nav {
   color: #0099cc; }
 
 @media screen and (max-width: 1182px) {
-  .center, #content section {
+  #content section {
     padding-left: 12px;
     padding-right: 12px; } }
 @media screen and (max-width: 400px) {
@@ -493,15 +500,14 @@ nav {
     *zoom: 1;
     padding: 32px 0;
     text-align: center; }
-    section img {
+    section.promo img {
       display: none; }
     section div {
       float: left;
       margin-right: -100%;
       width: 100%; }
     section button, section a {
-      margin: 0 auto;
-      display: block; }
+      margin: 0 auto; }
     section div:nth-child(1n+1) {
       margin-left: 0%;
       margin-bottom: 2%;

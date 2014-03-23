@@ -65,6 +65,9 @@ h4,h5,h6 {
   text-rendering: optimizeLegibility;
   margin-bottom: 1.875rem;
 }
+h1, h2, h3, em {
+  color: #414141;
+}
 h1 { font-size: 2.625rem; }
 h2 { font-size: 2.250rem; }
 h3 { font-size: 1.5rem; }
@@ -84,8 +87,6 @@ button, .button {
   background-color: transparent;
   color: #33b5e5;
   font-size: .875em;
-
-
   border: 1px solid;
   padding: 5px 40px;
   border-radius: 5px;
@@ -169,7 +170,7 @@ header {
   color: #fff;
 
   .logo {
-    font: 300 2rem Oleo Script; // 40px
+    font: 300 2rem Oleo Script;
     &:hover {border-bottom-color: transparent}
   }
 
@@ -181,120 +182,6 @@ header {
   .language {
     @include column(3);
     @include push(9);
-  }
-}
-
-.splash {
-  background-color: #33b5e5;
-  color: #fff;
-  overflow: hidden;
-  position: relative;
-  padding-top: 2.75rem;
-
-  .button, button {
-    display: inline-block;
-    border: 1px solid white;
-    font-size: 1.5rem;
-    padding: .75rem 1rem;
-    border-radius: 5px;
-
-    &.swag {
-      background-color:white;
-      border-color: white;
-      color: #33b5e5;
-    }
-  }
-
-  .center {
-    .text {
-      @include column(7);
-      @include push(0);
-    }
-    .preview {
-      @include column(5);
-      @include push(7);
-
-      margin-bottom: -20%;
-    }
-    & > div { padding: 0 2rem; }
-    .text { padding-top: 3rem }
-    img { width: 100%; }
-
-    .actions {
-      margin: 3rem 0;
-      .button, button { margin-right: .75rem }
-    }
-  }
-
-  video {
-    display: block;
-    margin: 0 auto;
-
-    background:transparent url('/poster.png') no-repeat 0 0; 
-    -webkit-background-size:cover; 
-    -moz-background-size:cover; 
-    -o-background-size:cover; 
-    background-size:cover; 
-  }
-}
-
-.demo {
-  padding: 60px 0;
-  h3 { color: #414141 }
-  .center {
-    .text {
-      @include column(7);
-      @include push(5);
-    }
-    .preview {
-      @include column(5);
-      @include push(0);
-    }
-    & > div { padding: 1.5rem 2rem 0; }
-    .text { padding-top: 4.5rem }
-    img { width: 100%; }
-  }
-}
-
-.columnar {
-  padding: 30px 0 60px;
-  text-align: center;
-
-  h1 { color: #414141 }
-
-  .features {
-    li { 
-      @include column(4);
-      padding: 0 20px;
-     } 
-    @include generate_grid_positions(li, 4);
-
-    button { margin: 0 auto }
-    h3, em { color: #414141 }
-    p { font-size: 18px }
-    img { margin: 30px 0 50px }
-  }
-}
-
-.signup {
-  padding: 80px 0;
-  text-align: center;
-  background: #111;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-
-  span {
-    color: #515151;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-weight: 100;
-    letter-spacing: 3px;
-    vertical-align: middle;
-  }
-  button {
-    margin-left: 2.3rem;
-    vertical-align: middle;
-    color: #fff;
   }
 }
 
@@ -361,21 +248,18 @@ section {
     margin-bottom: 0 !important;
   }
 
-  padding: 80px 0 30px;
+  padding: 80px 0 60px;
   border-bottom: 1px solid #e8e8e8;
-
-  h1, h3, em { color: #414141 }
 
   h1,h2,h3,h4,h5 { margin-bottom: 30px; }
   h6 { margin-bottom: 20px; }
-  img {vertical-align: bottom}
+  img {vertical-align: bottom; max-width: 100% }
   .middle {
     display: block;
     margin: 0 auto 20px;
   }
   &.centered {
     text-align: center;
-
     button { margin: 10px auto 20px }
   }
   &.no-bottom { padding-bottom: 0; }
@@ -399,6 +283,141 @@ nav {
       font-weight: 700;
       text-decoration: none;
     }
+  }
+}
+
+.splash {
+  background-color: #33b5e5;
+  color: #fff;
+  h1, h2, h3 { color: #fff }
+  overflow: hidden;
+  position: relative;
+  padding-top: 2.75rem;
+
+  .button, button {
+    display: inline-block;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    padding: .75rem 1rem;
+    border-radius: 5px;
+
+    &.swag {
+      background-color:white;
+      border-color: white;
+      color: #33b5e5;
+    }
+  }
+
+  .center {
+    .text {
+      @include column(7);
+      @include push(0);
+    }
+    .preview {
+      @include column(5);
+      @include push(7);
+
+      margin-bottom: -20%;
+    }
+    & > div { padding: 0 2rem; }
+    .text { padding-top: 3rem }
+    img { width: 100%; }
+
+    .actions {
+      margin: 3rem 0;
+      .button, button { margin-right: .75rem }
+    }
+  }
+
+  video {
+    display: block;
+    margin: 0 auto;
+
+    background:transparent url('/poster.png') no-repeat 0 0; 
+    -webkit-background-size:cover; 
+    -moz-background-size:cover; 
+    -o-background-size:cover; 
+    background-size:cover; 
+  }
+}
+
+.preview {
+  padding: 60px 0 30px;
+
+  .center {
+    .right, .left {
+      width: 27.5%;
+    }
+
+    .central {
+      width: 45%;
+    }
+
+    div {
+      display: inline-block;
+      padding: 1rem;
+      vertical-align: bottom;
+      img {
+        max-width: 100%;
+        //border: 1px solid #111;
+        box-shadow: 0 2px 15px rgba(0,0,0,.3);
+      }
+    }
+  }
+}
+
+.demo {
+  //padding: 60px 0;
+  .center {
+    .text {
+      @include column(7);
+      @include push(5);
+    }
+    .preview {
+      @include column(5);
+      @include push(0);
+    }
+    & > div { padding: 1.5rem 2rem 0; }
+    .text { padding-top: 4.5rem }
+  }
+}
+
+.columnar {
+  //padding: 30px 0 60px;
+  text-align: center;
+
+  .features {
+    li { 
+      @include column(4);
+      padding: 0 20px;
+     } 
+    @include generate_grid_positions(li, 4);
+
+    button { margin: 0 auto }
+    p { font-size: 18px }
+    img { margin: 30px 0 50px }
+  }
+}
+
+.signup {
+  padding: 80px 0;
+  text-align: center;
+  background: #111;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+
+  span {
+    color: #515151;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    vertical-align: middle;
+  }
+  button {
+    margin-left: 2.3rem;
+    vertical-align: middle;
+    color: #fff;
   }
 }
 
@@ -431,7 +450,7 @@ $container_margin:  auto; // auto|px|%  //
 }
 
 @media screen and (max-width: 1182px) {
-  .center, #content section {
+  #content section {
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -449,7 +468,7 @@ $container_margin:  auto; // auto|px|%  //
     @include container();
     @include clearfix();
 
-    img { display: none; }
+    &.promo img { display: none; }
     padding: 32px 0;
     text-align: center;
 
@@ -459,7 +478,6 @@ $container_margin:  auto; // auto|px|%  //
 
     button, a {
       margin: 0 auto;
-      display: block;
     }
 
     @include generate_grid_positions(div, 1);
@@ -487,11 +505,10 @@ $container_margin:  auto; // auto|px|%  //
     @include clearfix();
 
     .features {
-
       li {
         @include column(1);
         padding: 0 20px;
-       }
+      }
 
       @include generate_grid_positions(li, 1);
     }
