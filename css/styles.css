@@ -47,10 +47,6 @@
 .mejs-overlay-button {
   display: none; }
 
-a:hover, button:hover {
-  cursor: hand;
-  cursor: pointer; }
-
 body {
   font-family: Gudea;
   color: #858585;
@@ -457,6 +453,8 @@ nav {
   background: #111;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000; }
+  .signup button.white:hover {
+    color: #111111; }
   .signup span {
     color: #515151;
     font-size: 1.3rem;
