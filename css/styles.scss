@@ -346,10 +346,12 @@ nav {
   }
 }
 
-.preview {
-  padding: 60px 0 30px;
-
+.browser {
+  text-align: center;
   .center {
+    padding: 60px 0;
+    border-bottom: 1px solid #e8e8e8;
+
     .right, .left {
       width: 27.5%;
     }
@@ -364,8 +366,8 @@ nav {
       vertical-align: bottom;
       img {
         max-width: 100%;
-        //border: 1px solid #111;
-        box-shadow: 0 2px 15px rgba(0,0,0,.3);
+        box-shadow: 0 2px 15px rgba(0,0,0,.25);
+        border-radius: 3px;
       }
     }
   }
