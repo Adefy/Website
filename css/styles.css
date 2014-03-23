@@ -515,6 +515,46 @@ nav {
     text-align: center; }
     .about section div img {
       margin: 30px 0; }
+.about section.team .images {
+  width: 100%;
+  margin: 0 auto; }
+  .about section.team .images div {
+    float: left;
+    margin-right: -100%;
+    width: 16.67%; }
+  .about section.team .images div:nth-child(6n+1) {
+    margin-left: 0%;
+    margin-bottom: 0;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1; }
+  .about section.team .images div:nth-child(6n+2) {
+    margin-left: 16.67%;
+    margin-bottom: 0;
+    clear: none; }
+  .about section.team .images div:nth-child(6n+3) {
+    margin-left: 33.33%;
+    margin-bottom: 0;
+    clear: none; }
+  .about section.team .images div:nth-child(6n+4) {
+    margin-left: 50%;
+    margin-bottom: 0;
+    clear: none; }
+  .about section.team .images div:nth-child(6n+5) {
+    margin-left: 66.67%;
+    margin-bottom: 0;
+    clear: none; }
+  .about section.team .images div:nth-child(6n+6) {
+    margin-left: 83.33%;
+    margin-bottom: 0;
+    clear: none; }
+  .about section.team .images div {
+    padding: 1rem .5rem; }
+    .about section.team .images div h1, .about section.team .images div h2, .about section.team .images div h3, .about section.team .images div h4 {
+      margin-bottom: 0.3rem; }
+    .about section.team .images div img {
+      max-width: 100%;
+      margin: 0 0 1rem; }
 
 .location {
   background-image: url("/img/DSC_0469_hipster.png");
