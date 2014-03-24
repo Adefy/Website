@@ -1,0 +1,27 @@
+{
+  "creative": {
+    "text": {
+      "title": "Adefy Native Ads",
+      "description": "In-stream ads that keep users engaged",
+    },
+
+    "graphics": {
+      "icon": "//adefy.s3.amazonaws.com/ads/assets/ot1K7QifBKPNXYVX.png",
+      "featureMedium": "//adefy.s3.amazonaws.com/ads/assets/dpH9uELqitlvlBvN.png",
+      "featureLarge": "//adefy.s3.amazonaws.com/ads/assets/fT6vKMdxc1kspsy2.png",
+
+      "gallery": [
+        "//adefy.s3.amazonaws.com/ads/assets/skeNXFO8gpfUpUDj.png",
+        "//adefy.s3.amazonaws.com/ads/assets/emgvK8rTKTKDkLvA.png",
+        "//adefy.s3.amazonaws.com/ads/assets/11B3L3m58TtyR44U.png",
+        "//adefy.s3.amazonaws.com/ads/assets/SZxuiiQ8as78OPQu.png",
+        "//adefy.s3.amazonaws.com/ads/assets/PG6t1zLxjvkqX9Hx.png"
+      ]
+    }
+  },
+
+  "action": {
+    "click": "http://www.adefy.com/api/v1/click/1395583958369799397",
+    "impression": "http://www.adefy.com/api/v1/impression/1395583958369799397"
+  }
+}
