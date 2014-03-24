@@ -58,6 +58,13 @@ body {
   background: transparent url(/img/nexus_large.png) no-repeat;
   background-size: 100% 100%;
 
+  &.red {
+    background: transparent url(/img/nexus_large_red.png) no-repeat;
+    background-size: 100% 100%;
+    width: 340px !important;
+    padding: 50px 20px !important;
+  }
+
   &.no-phone {
     background: none;
     padding: 0;

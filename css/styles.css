@@ -61,6 +61,11 @@ body {
   padding: 51px 45px !important;
   background: transparent url(/img/nexus_large.png) no-repeat;
   background-size: 100% 100%; }
+  .glad-preview.red {
+    background: transparent url(/img/nexus_large_red.png) no-repeat;
+    background-size: 100% 100%;
+    width: 340px !important;
+    padding: 50px 20px !important; }
   .glad-preview.no-phone {
     background: none;
     padding: 0;
