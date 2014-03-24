@@ -1,4 +1,6 @@
-var watch, face1, face2, face3, pointer1, pointer2, pointer3, text, button, mech;
+var button, face1, face2, face3, mech, pointer1, pointer2, pointer3, text, watch;
+
+AJS.setAutoScale(width / 720, height / 1280);
 
 AJS.setClearColor(0, 0, 0);
 
@@ -48,4 +50,4 @@ pointer1.move(289, null, 1800, 2750);
 pointer1.move(null, 493, 1800, 2750, [{ x: 0.25, y: 1362 }, { x: 0.25, y: 493 }]);
 
 // Bring text in
-text.move(360, 1100, 500, 3500);
+text.move(360, 1100, 500, 4500);

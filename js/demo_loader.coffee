@@ -18,20 +18,18 @@ loadAd = (options) ->
           if window.pageYOffset > options.scrollOffset and not hasTriggered
             hasTriggered = true
 
-            (->
-              eval """
-                var width = #{options.width};
-                var height = #{options.height};
+            eval """
+              var width = #{options.width};
+              var height = #{options.height};
 
-                #{adManifest}
+              #{adManifest}
 
-                AJS.init(function() {
-                  AJS.loadManifest(textures, function() {
-                    #{adLogic}
-                  });
-                }, #{options.width}, #{options.height}, "#{canvasDiv}");
-              """
-            )()
+              AJS.init(function() {
+                AJS.loadManifest(textures, function() {
+                  #{adLogic}
+                });
+              }, #{options.width}, #{options.height}, "#{canvasDiv}");
+            """
 
 loadSource = (path, cb) ->
   return cb() if path == undefined or path == null

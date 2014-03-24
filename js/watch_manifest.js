@@ -1,5 +1,5 @@
 var textures = [{
-  "path": "/assets/watch/bg.png",
+  "path": "/assets/watch/bg.jpg",
   "name": "bg"
 }, {
   "path": "/assets/watch/button.png",
