@@ -185,7 +185,7 @@ button, .button {
       margin-right: 0; }
 
 header {
-  background-color: #33b5e5;
+  background-color: #0a242e;
   padding: 15px 0;
   line-height: 3rem;
   font-size: 14px;
@@ -559,6 +559,38 @@ nav {
         margin: 0 0 1rem;
         border-radius: 50%; }
   .about section.team .links a {
+    display: inline-block;
+    margin: 0 4px; }
+  .about section.agencies-team .images {
+    width: 100%;
+    margin: 0 auto; }
+    .about section.agencies-team .images div {
+      float: left;
+      margin-right: -100%;
+      width: 33.33%; }
+    .about section.agencies-team .images div:nth-child(3n+1) {
+      margin-left: 0%;
+      margin-bottom: 0;
+      clear: both;
+      overflow: hidden;
+      *zoom: 1; }
+    .about section.agencies-team .images div:nth-child(3n+2) {
+      margin-left: 33.33%;
+      margin-bottom: 0;
+      clear: none; }
+    .about section.agencies-team .images div:nth-child(3n+3) {
+      margin-left: 66.67%;
+      margin-bottom: 0;
+      clear: none; }
+    .about section.agencies-team .images div {
+      padding: 1rem 4.5rem; }
+      .about section.agencies-team .images div h1, .about section.agencies-team .images div h2, .about section.agencies-team .images div h3, .about section.agencies-team .images div h4, .about section.agencies-team .images div h5, .about section.agencies-team .images div h6 {
+        margin-bottom: 0.3rem; }
+      .about section.agencies-team .images div img {
+        max-width: 100%;
+        margin: 0 0 1rem;
+        border-radius: 50%; }
+  .about section.agencies-team .links a {
     display: inline-block;
     margin: 0 4px; }
 

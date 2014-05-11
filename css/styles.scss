@@ -192,7 +192,7 @@ button, .button {
 }
 
 header {
-  background-color: #33b5e5;
+  background-color: #0a242e;
   padding: 15px 0;
   line-height: 3rem;
   font-size: 14px;
@@ -499,6 +499,30 @@ nav {
       @include container();
       div { @include column(3); }
       @include generate_grid_positions(div, 3);
+      div {
+        padding: 1rem 4.5rem;
+        h1,h2,h3,h4,h5,h6{ margin-bottom: .3rem }
+        img {
+          max-width: 100%;
+          margin: 0 0 1rem;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .links {
+      a {
+        display: inline-block;
+        margin: 0 4px;
+      }
+    }
+  }
+
+  section.agencies-team {
+    .images {
+      @include container();
+      div { @include column(4); }
+      @include generate_grid_positions(div, 4);
       div {
         padding: 1rem 4.5rem;
         h1,h2,h3,h4,h5,h6{ margin-bottom: .3rem }
