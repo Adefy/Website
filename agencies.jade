@@ -4,7 +4,7 @@
       h1 Information for Agencies interested in Adefy
       h3 Rich media without the file size and performance limitations.
       .actions
-        a.button.swag(href="/sales_brochure.pdf" target="_blank") Download Sales Brochure
+        a.button.swag(href="/sales_brochure.pdf" onclick="_gaq.push(['_trackEvent', 'Download', 'SalesBrochure', this.href])" target="_blank") Download Sales Brochure
     .preview
       img(src="/img/nexus_large_red_skittles.png" width="350")
 
@@ -52,7 +52,7 @@ section.columnar: .center
 
     div
       h3 More Information
-      a.button(href="/sales_brochure.pdf" target="_blank") Download Brochure
+      a.button(href="/sales_brochure.pdf" onclick="_gaq.push(['_trackEvent', 'Download', 'SalesBrochure', this.href])" target="_blank") Download Brochure
 
     div
       img(src="/img/team/manu.png")
