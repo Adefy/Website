@@ -1,61 +1,40 @@
 .splash
   .center
     .text
-      h1 A <strong>Native</strong> Advertising Platform for Mobile
-      h3 Ads that keep users engaged
+      h1 Innovation for Media Agencies
+      h3 Want <em>super-smooth</em> native animated mobile ads that load <em>instantly? We've got you covered.</em>
       .actions
         a.button.white(href="/technology") Learn more
-        a.button.swag(href="https://app.adefy.com/signup") Get started!
+        a.button.swag(href="/sales_brochure.pdf" onclick="ga('send', 'event', 'Download', 'PDF', 'Sales Brochure')" target="_blank") Download Brochure
     .preview
-      img(src="/img/native-messages.jpg")
+      img(src="/img/PublishersMonetize.png" width="350")
 
-.browser: .center
-  h2 The Platform
-  p Performance Analytics &amp; Insights
-  div.left
-    img(src="/img/preview_left.jpg")
-  div.central
-    img(src="/img/preview_center.jpg")
-  div.right
-    img(src="/img/preview_right.jpg")
+section.columnar: .center
+  h6 What We Offer
+  h1 Smaller &amp; Faster Mobile Ads
+  h3
+    | As agencies push the boundaries of what is possible on mobile, large file
+    | sizes, performance issues, and difficulty rendering 3D creatives have
+    | become bottlenecks for HTML5 rich media.
 
+  ul.features
+    li
+      img(src="/img/icons/link.png" data-at2x="/img/icons/link@2x.png")
+      h3 Technology
+      h4
+       | Adefy GLAds render natively at the application level, achieving performance and flexibility far beyond what traditional HTML5 rich media can reach.
 
-section.columnar
-  p We believe ads can be awesome
-  h1 Re-defining mobile advertising
+    li
+      img(src="/img/icons/smartphone.png" data-at2x="/img/icons/smartphone@2x.png")
+      h3 Authoring Tools
+      h4
+       | Our Ad Editor brings out the strengths of our GLAd technology, introducing a unique workflow tuned for animation-heavy mobile creatives. Craft interactive, realtime-rendered scenes for your publishers, using a powerful keyframe-based animation system and integrated 2D physics engine.
 
-  .center
-    ul.features
-      li
-        img(src="/img/icons/transform.png" data-at2x="/img/icons/transform@2x.png")
-        h3 Nurturing Flow
-        p Users don't want to be interrupted on their phones.
-
-        a(href="/publishers")
-          button Publishers
-      li
-        img(src="/img/icons/smartphone.png" data-at2x="/img/icons/smartphone@2x.png")
-        h3 Built for Mobile
-        p Mobile devices are personal, integrating into our lives uniquely.
-
-        a(href="/technology")
-          button Technology
-      li
-        img(src="/img/icons/shuffle.png" data-at2x="/img/icons/shuffle@2x.png")
-        h3 Enriching Experiences
-        p Our ads fit seamlessly into apps and don't interrupt user activity
-
-        a(href="/advertisers")
-          button Advertisers
-
-.demo.no-bottom: .center
-  .preview
-    img(src="/img/native-iphone-shadow.jpg")
-  .text
-    h2 Adefy Native Ads
-    h4 Content is king
-    p Users use their devices to find and consume consume content, a behaviour which Adefy Native ads have been built to integrate with. Our native ads are simply ad meta data, which publishers can display however they wish, monetizing their applications without annoying banner ads.
-    img(src="/img/native-json.jpg" data-at2x="/img/2x/native-json.png")
+    li
+      img(src="/img/icons/people.png" data-at2x="/img/icons/people@2x.png")
+      h3 Early Adopters
+      h4
+       | Simply put, our mobile ad rendering technology offers more flexibility than we know what to do with. We are looking for 5 Early Adopters to work closely with us and craft the perfect media agency platform. 
 
 .demo: .center
   .text.gl-text
@@ -67,41 +46,15 @@ section.columnar
 
   .preview.glad-preview.red#glad
 
-section.columnar: .center
-  h6 Mission
-  h1 Enabling Ads users can love
-  h3
-    | We believe in enabling advertising that cultivates user experiences.
-    | Existing ad formats are obtuse, and fit in poorly with mobile use
-    | patterns. The web has and is evolving dramatically, and content
-    | delivery needs to reflect this.
-
-  ul.features
-    li
-      img(src="/img/icons/link.png" data-at2x="/img/icons/link@2x.png")
-      h3 Organic
-      h4
-       | Advertisments appear in chains of interaction on mobiles, and we
-       | believe they shoud fit in seamlessly.
-
-    li
-      img(src="/img/icons/diamond.png" data-at2x="/img/icons/diamond@2x.png")
-      h3 Quality
-      h4
-       | Mobile advertising, as it exists today, values raw volume. We believe
-       | the quality of individual impressions is vital to successful advertising.
-
-    li
-      img(src="/img/icons/people.png" data-at2x="/img/icons/people@2x.png")
-      h3 User Experience
-      h4
-       | Flow is precious, as is screen space. Quality of user experience
-       | comes before all else in our approach to creative delivery.
+.about.center: section
+  h6 Early Adopters
+  h1 Get In Touch
+  h4 If you are a media agency interested in learning more about our technology,<br><em><a href="mailto:info@adefy.com" target="_blank">contact</a></em> us for pricing options and a demo!
 
 .signup: .center
-  span Drop the banners. Go native now!
-  a(href="https://app.adefy.com/signup")
-    button.white.large Sign up!
+  span Interested in learning more?
+  a(href="/sales_brochure.pdf" onclick="ga('send', 'event', 'Download', 'PDF', 'Sales Brochure')" target="_blank")
+    button.white.large Download Brochure
 
 script.
   $(document).ready(function() {

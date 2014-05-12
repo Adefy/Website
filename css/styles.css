@@ -90,6 +90,12 @@ h4, h5, h6 {
   text-rendering: optimizeLegibility;
   margin-bottom: 1.875rem; }
 
+em {
+  font-weight: bold; }
+
+h3 em {
+  color: inherit; }
+
 h1, h2, h3, em {
   color: #414141; }
 
@@ -347,7 +353,7 @@ nav {
       text-decoration: underline; }
 
 .splash {
-  background-color: #33b5e5;
+  background-color: #0a242e;
   color: #fff;
   overflow: hidden;
   position: relative;
@@ -363,7 +369,7 @@ nav {
     .splash .button.swag, .splash button.swag {
       background-color: white;
       border-color: white;
-      color: #33b5e5; }
+      color: #0a242e; }
   .splash .center .text {
     float: left;
     margin-right: -100%;
@@ -374,7 +380,7 @@ nav {
     margin-right: -100%;
     width: 41.67%;
     margin-left: 58.33%;
-    margin-bottom: -30%; }
+    margin-bottom: -1%; }
   .splash .center > div {
     padding: 0 2rem; }
   .splash .center .text {
