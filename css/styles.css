@@ -352,6 +352,58 @@ nav {
     nav a:hover, nav a.active {
       text-decoration: underline; }
 
+#contact-us-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none; }
+
+button.gray {
+  border-color: #ccc;
+  color: #ccc; }
+  button.gray:hover {
+    background-color: #ccc;
+    color: white; }
+
+#contact-us-form {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  display: none;
+  width: 100%;
+  z-index: 1000000;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+  #contact-us-form .inner {
+    width: 960px;
+    padding: 32px 16px;
+    margin: 0 auto; }
+    @media screen and (max-width: 960px) {
+      #contact-us-form .inner {
+        width: 100%; } }
+    #contact-us-form .inner input {
+      padding: 7px;
+      border: 1px solid #ccc;
+      width: 30%; }
+    #contact-us-form .inner .success-text {
+      margin-left: 16px;
+      color: #2ecc71; }
+    #contact-us-form .inner .error-text {
+      margin-left: 16px;
+      color: #e74c3c; }
+    #contact-us-form .inner button {
+      margin-left: 16px;
+      padding: 5px 16px; }
+    #contact-us-form .inner button[disabled="disabled"] {
+      color: #ccc !important; }
+      #contact-us-form .inner button[disabled="disabled"]:hover {
+        color: inherit;
+        background-color: inherit; }
+
 .splash {
   background-color: #0a242e;
   color: #fff;

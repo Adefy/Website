@@ -3,3 +3,5 @@ www/
 css/.sass-cache
 css/styles.css
 _components/
+
+contact_email_listener/node_modules

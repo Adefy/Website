@@ -38,6 +38,17 @@ html(lang="en")
 
   body
 
+    #contact-us-overlay: #contact-us-form: .inner
+      h2 Get in touch
+      h4 <em><a href="mailto:info@adefy.com" target="_blank">Contact us directly</a></em> or enter your email and we'll get back to you!
+
+      input(type="email" id="contact-us-email" placeholder="Enter email")
+      button.submit Submit
+      button.gray.close Close
+
+      span.success-text
+      span.error-text
+
     header
       .center
 
@@ -48,9 +59,9 @@ html(lang="en")
           //- a(href="/publishers") Publishers
           a(href="/advertisers") Media Agencies
           a(href="/about") About
-          a(href="mailto:info@adefy.com" target="_blank") Contact us
+          a(href="#" onclick="openContactForm()") Contact us
         .language
-          a.button.white(href="mailto:info@adefy.com" target="_blank") Interested? Get in touch!
+          a.button.white(href="#" onclick="openContactForm()") Interested? Get in touch!
 
     #content
       != yield
@@ -66,7 +77,7 @@ html(lang="en")
 
           li
             h6 Media Agencies
-            a(href="mailto:info@adefy.com" target="_blank") Get in touch!
+            a(href="#" onclick="openContactForm()" target="_blank") Get in touch!
             a(href="/sales_brochure.pdf" onclick="ga('send', 'event', 'Download', 'PDF', 'Sales Brochure')" target="_blank") Download brochure
           //- li
             h6 Publishers
@@ -83,7 +94,7 @@ html(lang="en")
           li
             h6 Help center
             a(href="/about") About
-            a(href="mailto:info@adefy.com") Contact Us
+            a(href="#" onclick="openContactForm()") Contact Us
             a(href="https://developer.adefy.com" target="_blank") Developer Center
       hr
       .center
@@ -93,10 +104,10 @@ html(lang="en")
           // a(href="/publishers") Publishers
           a(href="/advertisers") Media Agencies
           a(href="/about") About
-          a(href="mailto:info@adefy.com" target="_blank") Contact us
+          a(href="#" onclick="openContactForm()") Contact us
           a(href="https://twitter.com/AdefyMobile" target="_blank"): i.fa.fa-twitter
         .language
-          a.button.white(href="mailto:info@adefy.com" target="_blank") Interested? Get in touch!
+          a.button.white(href="#" onclick="openContactForm()") Interested? Get in touch!
 
       .center
         p.copyright
@@ -119,3 +130,52 @@ html(lang="en")
       ga('send', 'pageview');
 
       $("video").mediaelementplayer({ alwaysShowControls: true });
+
+      //- Contact form
+      $(document).ready(function (){
+
+        var contactFormVisible = false;
+        window.openContactForm = function() {
+          if(contactFormVisible == true) { return; }
+
+          $("#contact-us-overlay").fadeIn(400, function(){
+            $("#contact-us-form").show("fast");
+
+            contactFormVisible = true;
+
+            $("#contact-us-form button.submit, #contact-us-form input").removeAttr("disabled", "disabled");
+            $("#contact-us-form input").val("");
+          });
+        };
+
+        $("#contact-us-form button.submit").click(function() {
+
+          var email = $("#contact-us-form input").val();
+
+          $.ajax({
+            type: "GET",
+            url: "https://www.adefy.com/bounce_email",
+            data: { email: encodeURIComponent(email) },
+            success: function() {
+              $("#contact-us-form .success-text").text("Submitted!");
+              $("#contact-us-form .error-text").text("");
+
+              $("#contact-us-form button.submit, #contact-us-form input").attr("disabled", "disabled");
+            },
+            error: function() {
+              $("#contact-us-form .success-text").text("");
+              $("#contact-us-form .error-text").text("An error occured ;(");
+            }
+          });
+        });
+
+        $("#contact-us-form button.close").click(function() {
+          if(contactFormVisible == false) { return; }
+
+          $("#contact-us-form").hide(0, function(){
+            $("#contact-us-overlay").fadeOut(400);
+            contactFormVisible = false;
+          });
+        });
+
+      });
