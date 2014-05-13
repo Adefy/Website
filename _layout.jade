@@ -160,6 +160,8 @@ html(lang="en")
               $("#contact-us-form .success-text").text("Submitted!");
               $("#contact-us-form .error-text").text("");
 
+              ga('send', 'event', 'Submit', 'Contact', 'Email');
+
               $("#contact-us-form button.submit, #contact-us-form input").attr("disabled", "disabled");
             },
             error: function() {
