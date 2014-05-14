@@ -581,6 +581,15 @@ button.gray {
       @include container();
       div { @include column(3); }
       @include generate_grid_positions(div, 3);
+
+      @media screen and (max-width: 600px) {
+        div {
+          @include column(12);
+        }
+
+        @include generate_grid_positions(div, 12);
+      }
+
       div {
         padding: 1rem 4.5rem;
         h1,h2,h3,h4,h5,h6{ margin-bottom: .3rem }

@@ -608,6 +608,17 @@ button.gray {
       margin-left: 75%;
       margin-bottom: 0;
       clear: none; }
+    @media screen and (max-width: 600px) {
+      .about section.team .images div {
+        float: left;
+        margin-right: -100%;
+        width: 100%; }
+      .about section.team .images div:nth-child(1n+1) {
+        margin-left: 0%;
+        margin-bottom: 0;
+        clear: both;
+        overflow: hidden;
+        *zoom: 1; } }
     .about section.team .images div {
       padding: 1rem 4.5rem; }
       .about section.team .images div h1, .about section.team .images div h2, .about section.team .images div h3, .about section.team .images div h4, .about section.team .images div h5, .about section.team .images div h6 {
